@@ -137,7 +137,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Navigation */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3">
+      <div className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1.5 md:gap-3">
         {slides.map((slide, index) => (
           <button
             key={slide.id}
@@ -159,24 +159,24 @@ export default function Home() {
       </div>
 
       {/* Slide counter */}
-      <div className="fixed bottom-8 right-8 z-50 text-sm text-[#8A94A6] font-medium">
+      <div className="fixed bottom-4 md:bottom-8 right-4 md:right-8 z-50 text-xs md:text-sm text-[#8A94A6] font-medium">
         <span className="text-[#52AE30]">{String(currentSlide + 1).padStart(2, '0')}</span>
         <span className="mx-2">/</span>
         <span>{String(slides.length).padStart(2, '0')}</span>
       </div>
 
-      {/* Navigation arrows */}
+      {/* Navigation arrows - hidden on mobile */}
       <button
         onClick={prevSlide}
         disabled={currentSlide === 0}
-        className={`fixed left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full glass flex items-center justify-center transition-all ${
+        className={`hidden md:flex fixed left-4 lg:left-6 top-1/2 -translate-y-1/2 z-50 w-10 lg:w-12 h-10 lg:h-12 rounded-full glass items-center justify-center transition-all ${
           currentSlide === 0
             ? 'opacity-30 cursor-not-allowed'
             : 'hover:bg-[#52AE30]/20 hover:border-[#52AE30]'
         }`}
         aria-label="Previous slide"
       >
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 lg:w-6 h-5 lg:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -184,24 +184,29 @@ export default function Home() {
       <button
         onClick={nextSlide}
         disabled={currentSlide === slides.length - 1}
-        className={`fixed right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full glass flex items-center justify-center transition-all ${
+        className={`hidden md:flex fixed right-4 lg:right-6 top-1/2 -translate-y-1/2 z-50 w-10 lg:w-12 h-10 lg:h-12 rounded-full glass items-center justify-center transition-all ${
           currentSlide === slides.length - 1
             ? 'opacity-30 cursor-not-allowed'
             : 'hover:bg-[#52AE30]/20 hover:border-[#52AE30]'
         }`}
         aria-label="Next slide"
       >
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 lg:w-6 h-5 lg:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
-      {/* Keyboard hint */}
-      <div className="fixed bottom-8 left-8 z-50 flex items-center gap-2 text-xs text-[#8A94A6]">
+      {/* Keyboard hint - hidden on mobile */}
+      <div className="hidden md:flex fixed bottom-8 left-8 z-50 items-center gap-2 text-xs text-[#8A94A6]">
         <kbd className="px-2 py-1 rounded bg-[#1A222C] border border-[#2A323C] text-[10px]">
           <span className="sr-only">Arrow keys</span>
         </kbd>
         <span>Use arrow keys to navigate</span>
+      </div>
+
+      {/* Swipe hint - mobile only */}
+      <div className="flex md:hidden fixed bottom-4 left-4 z-50 items-center gap-1 text-[10px] text-[#8A94A6]">
+        <span>Swipe or tap arrows</span>
       </div>
     </main>
   );

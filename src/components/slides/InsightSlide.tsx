@@ -12,41 +12,41 @@ const journeySteps = [
 
 export default function InsightSlide() {
   return (
-    <div className="h-full w-full flex flex-col justify-center px-6 md:px-12 lg:px-16 py-8">
+    <div className="h-full w-full flex flex-col justify-center px-4 md:px-12 lg:px-16 py-4 md:py-8">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-8 text-center"
+          className="mb-4 md:mb-8 text-center"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-sm font-medium uppercase tracking-widest mb-4 block">
+          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             The Insight
           </span>
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-2 md:mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Users Need <span className="gradient-text">Progress</span>,
-            <br />
-            Not Just Products
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>Not Just Products
           </h2>
-          <p className="text-xl text-[#8A94A6] max-w-2xl mx-auto">
+          <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
             People are motivated by visible progress toward meaningful goals
           </p>
         </motion.div>
 
         {/* Journey visualization */}
         <motion.div
-          className="mb-8"
+          className="mb-4 md:mb-8"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           {/* Progress bar background */}
           <div className="relative">
-            <div className="h-2 bg-[#1A222C] rounded-full overflow-hidden">
+            <div className="h-1.5 md:h-2 bg-[#1A222C] rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-gradient-to-r from-[#52AE30] via-[#C5A572] to-[#FFD700] rounded-full"
                 initial={{ width: 0 }}
@@ -56,7 +56,7 @@ export default function InsightSlide() {
             </div>
 
             {/* Journey steps */}
-            <div className="flex justify-between mt-8">
+            <div className="flex justify-between mt-4 md:mt-8">
               {journeySteps.map((step, index) => (
                 <motion.div
                   key={step.label}
@@ -67,7 +67,7 @@ export default function InsightSlide() {
                 >
                   {/* Dot */}
                   <motion.div
-                    className="w-6 h-6 rounded-full border-4 border-[#0A0F14] -mt-12 mb-4 relative z-10"
+                    className="w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#0A0F14] -mt-6 md:-mt-12 mb-2 md:mb-4 relative z-10"
                     style={{ backgroundColor: step.color }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -85,15 +85,17 @@ export default function InsightSlide() {
 
                   {/* Label */}
                   <span
-                    className="text-sm font-medium text-center leading-tight"
+                    className="text-[8px] sm:text-[10px] md:text-sm font-medium text-center leading-tight"
                     style={{ color: step.color }}
                   >
-                    {step.label}
+                    {step.label.split(' ').map((word, i) => (
+                      <span key={i} className="block sm:inline">{word}{i === 0 && <span className="hidden sm:inline"> </span>}</span>
+                    ))}
                   </span>
 
-                  {/* Progress indicator */}
+                  {/* Progress indicator - hidden on mobile */}
                   {index > 0 && (
-                    <div className="mt-2 flex items-center gap-1">
+                    <div className="hidden md:flex mt-2 items-center gap-1">
                       <svg className="w-3 h-3 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
@@ -108,17 +110,17 @@ export default function InsightSlide() {
 
         {/* Key stat */}
         <motion.div
-          className="glass rounded-2xl p-6 md:p-8 text-center relative overflow-hidden"
+          className="glass rounded-xl md:rounded-2xl p-4 md:p-8 text-center relative overflow-hidden"
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
         >
           {/* Background glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#52AE30]/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 md:w-64 h-32 md:h-64 bg-[#52AE30]/10 rounded-full blur-3xl" />
 
           <div className="relative z-10">
             <motion.div
-              className="text-5xl md:text-6xl font-bold gradient-text mb-2"
+              className="text-4xl md:text-6xl font-bold gradient-text mb-1 md:mb-2"
               style={{ fontFamily: "'Playfair Display', serif" }}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
@@ -126,16 +128,16 @@ export default function InsightSlide() {
             >
               3x
             </motion.div>
-            <p className="text-xl md:text-2xl text-[#F8F9FA] font-medium mb-2">
+            <p className="text-base md:text-2xl text-[#F8F9FA] font-medium mb-1 md:mb-2">
               Near-miss moments convert better
             </p>
-            <p className="text-[#8A94A6]">
+            <p className="text-sm md:text-base text-[#8A94A6]">
               than generic calls-to-action
             </p>
           </div>
 
-          {/* Decorative elements */}
-          <div className="absolute top-4 right-4 flex gap-1">
+          {/* Decorative elements - hidden on mobile */}
+          <div className="hidden md:flex absolute top-4 right-4 gap-1">
             <div className="w-2 h-2 rounded-full bg-[#52AE30]" />
             <div className="w-2 h-2 rounded-full bg-[#52AE30]/50" />
             <div className="w-2 h-2 rounded-full bg-[#52AE30]/25" />
@@ -144,15 +146,15 @@ export default function InsightSlide() {
 
         {/* Bottom quote */}
         <motion.div
-          className="mt-6 text-center"
+          className="mt-4 md:mt-6 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
         >
-          <p className="text-lg text-[#8A94A6] italic">
+          <p className="text-sm md:text-lg text-[#8A94A6] italic">
             &ldquo;You&apos;re <span className="text-[#52AE30]">80%</span> to unlocking Premium benefits&rdquo;
             <br />
-            <span className="text-sm not-italic">— The psychology that drives action</span>
+            <span className="text-xs md:text-sm not-italic">— The psychology that drives action</span>
           </p>
         </motion.div>
       </div>
