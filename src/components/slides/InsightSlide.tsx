@@ -121,12 +121,11 @@ export default function InsightSlide() {
           <div className="relative z-10">
             <motion.div
               className="text-5xl md:text-7xl lg:text-8xl font-bold gradient-text mb-1 md:mb-2"
-              style={{ fontFamily: "'Playfair Display', serif" }}
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.1, duration: 0.4, type: 'spring' }}
             >
-              3x
+              3X
             </motion.div>
             <p className="text-base md:text-2xl text-[#F8F9FA] font-medium mb-1 md:mb-2">
               Near-miss moments convert better
