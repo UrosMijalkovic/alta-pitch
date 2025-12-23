@@ -3,10 +3,42 @@
 import { motion } from 'motion/react';
 
 const integrationPoints = [
-  { label: "Event-based Architecture", detail: "Kafka integration for real-time events" },
-  { label: "REST API", detail: "Full API access for all interactions" },
-  { label: "Native Widget", detail: "Embeds seamlessly in your app" },
-  { label: "Your Data, Your Control", detail: "Data stays in your infrastructure" },
+  {
+    label: "iFrame Embed",
+    detail: "Simple embed in your app, we handle everything",
+    icon: (
+      <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Zero OTP Work",
+    detail: "All widget interactions handled by us",
+    icon: (
+      <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Real-time Updates",
+    detail: "WebSocket communication for instant sync",
+    icon: (
+      <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Your Data Control",
+    detail: "Data stays in your Kafka infrastructure",
+    icon: (
+      <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function IntegrationSlide() {
@@ -27,10 +59,10 @@ export default function IntegrationSlide() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Seamless, <span className="gradient-text">Secure</span>, Scalable
+            Simple Embed, <span className="gradient-text">Zero Effort</span>
           </h2>
           <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
-            Enterprise-grade integration with minimal development effort
+            We handle everything — you just authenticate the user
           </p>
         </motion.div>
 
@@ -53,10 +85,10 @@ export default function IntegrationSlide() {
                 <span className="text-white font-bold text-sm md:text-lg">OTP</span>
               </div>
               <p className="text-white font-semibold text-center text-xs md:text-base">OTP Bank App</p>
-              <p className="text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 md:mt-1">iOS / Android / Web</p>
+              <p className="text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 md:mt-1">Auth + UUID</p>
             </motion.div>
 
-            {/* Connection arrows */}
+            {/* Connection arrows - iFrame */}
             <motion.div
               className="flex flex-col items-center gap-1 md:gap-2"
               initial={{ scale: 0, opacity: 0 }}
@@ -69,7 +101,7 @@ export default function IntegrationSlide() {
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>
-              <span className="text-[8px] md:text-xs text-[#8A94A6]">REST API</span>
+              <span className="text-[8px] md:text-xs text-[#52AE30] font-medium">iFrame</span>
               <div className="flex items-center gap-1 md:gap-2">
                 <svg className="w-3 h-3 md:w-4 md:h-4 text-[#52AE30] rotate-180" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -78,20 +110,21 @@ export default function IntegrationSlide() {
               </div>
             </motion.div>
 
-            {/* iDojo Platform */}
+            {/* iDojo Platform - Central */}
             <motion.div
-              className="w-32 md:w-48 h-24 md:h-36 rounded-lg md:rounded-xl bg-gradient-to-br from-[#1A222C] to-[#0A0F14] border-2 border-[#52AE30] flex flex-col items-center justify-center p-2 md:p-3 green-glow"
+              className="w-36 md:w-56 h-28 md:h-40 rounded-lg md:rounded-xl bg-gradient-to-br from-[#1A222C] to-[#0A0F14] border-2 border-[#52AE30] flex flex-col items-center justify-center p-2 md:p-3 green-glow"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center mb-1 md:mb-3">
-                <span className="text-white font-bold text-base md:text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>iD</span>
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center mb-1 md:mb-2">
+                <span className="text-white font-bold text-base md:text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>iD</span>
               </div>
-              <p className="text-white font-semibold text-center text-xs md:text-base">iDojo Platform</p>
-              <div className="flex gap-1 md:gap-2 mt-1 md:mt-2">
-                <span className="text-[8px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 rounded bg-[#52AE30]/20 text-[#52AE30]">Missions</span>
-                <span className="text-[8px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 rounded bg-[#52AE30]/20 text-[#52AE30]">Rewards</span>
+              <p className="text-white font-semibold text-center text-xs md:text-base mb-1">iDojo Platform</p>
+              <div className="flex flex-wrap justify-center gap-1 md:gap-1.5">
+                <span className="text-[7px] md:text-[10px] px-1 md:px-1.5 py-0.5 rounded bg-[#52AE30]/20 text-[#52AE30]">Widget</span>
+                <span className="text-[7px] md:text-[10px] px-1 md:px-1.5 py-0.5 rounded bg-[#3498DB]/20 text-[#3498DB]">Admin</span>
+                <span className="text-[7px] md:text-[10px] px-1 md:px-1.5 py-0.5 rounded bg-[#9B59B6]/20 text-[#9B59B6]">Socket</span>
               </div>
             </motion.div>
 
@@ -108,7 +141,7 @@ export default function IntegrationSlide() {
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>
-              <span className="text-[8px] md:text-xs text-[#8A94A6]">Events</span>
+              <span className="text-[8px] md:text-xs text-[#FFB84D] font-medium">Kafka</span>
               <div className="flex items-center gap-1 md:gap-2">
                 <svg className="w-3 h-3 md:w-4 md:h-4 text-[#FFB84D] rotate-180" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -130,7 +163,7 @@ export default function IntegrationSlide() {
                 </svg>
               </div>
               <p className="text-white font-semibold text-center text-xs md:text-base">OTP Backend</p>
-              <p className="text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 md:mt-1">Kafka / Events</p>
+              <p className="text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 md:mt-1">User Events</p>
             </motion.div>
           </div>
         </motion.div>
@@ -145,10 +178,8 @@ export default function IntegrationSlide() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 + index * 0.1, duration: 0.4 }}
             >
-              <div className="w-8 h-8 md:w-12 md:h-12 mx-auto rounded-lg md:rounded-xl bg-[#52AE30]/20 flex items-center justify-center mb-2 md:mb-3">
-                <svg className="w-4 h-4 md:w-6 md:h-6 text-[#52AE30]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
-                </svg>
+              <div className="w-8 h-8 md:w-12 md:h-12 mx-auto rounded-lg md:rounded-xl bg-[#52AE30]/20 flex items-center justify-center mb-2 md:mb-3 text-[#52AE30]">
+                {point.icon}
               </div>
               <h4 className="text-white font-semibold mb-0.5 md:mb-1 text-xs md:text-base">{point.label}</h4>
               <p className="text-[10px] md:text-sm text-[#8A94A6]">{point.detail}</p>
@@ -156,31 +187,34 @@ export default function IntegrationSlide() {
           ))}
         </div>
 
-        {/* Code snippet - hidden on mobile */}
+        {/* How it works - hidden on mobile */}
         <motion.div
-          className="hidden md:block mt-4 glass rounded-xl overflow-hidden"
+          className="hidden md:grid grid-cols-3 gap-3 mt-4"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.5 }}
         >
-          <div className="bg-[#1A222C] px-4 py-2 border-b border-white/5 flex items-center gap-2">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-[#FF6B6B]" />
-              <div className="w-3 h-3 rounded-full bg-[#FFB84D]" />
-              <div className="w-3 h-3 rounded-full bg-[#52AE30]" />
+          <div className="glass rounded-xl p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">1</div>
+              <h4 className="text-white font-medium text-sm">OTP Authenticates</h4>
             </div>
-            <span className="text-xs text-[#8A94A6] ml-2">Event Trigger Example</span>
+            <p className="text-xs text-[#8A94A6]">User logs in, OTP sends UUID + client name to our server</p>
           </div>
-          <pre className="p-4 text-sm overflow-x-auto">
-            <code className="text-[#8A94A6]">
-              <span className="text-[#9B59B6]">POST</span> <span className="text-[#52AE30]">/api/v1/events</span>{'\n'}
-              <span className="text-[#8A94A6]">{'{'}</span>{'\n'}
-              <span className="text-[#3498DB]">  &quot;event_type&quot;</span>: <span className="text-[#FFB84D]">&quot;SALARY_RECEIVED&quot;</span>,{'\n'}
-              <span className="text-[#3498DB]">  &quot;user_id&quot;</span>: <span className="text-[#FFB84D]">&quot;usr_123456&quot;</span>,{'\n'}
-              <span className="text-[#3498DB]">  &quot;metadata&quot;</span>: {'{'} <span className="text-[#3498DB]">&quot;amount&quot;</span>: <span className="text-[#52AE30]">2500.00</span> {'}'}{'\n'}
-              <span className="text-[#8A94A6]">{'}'}</span>
-            </code>
-          </pre>
+          <div className="glass rounded-xl p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">2</div>
+              <h4 className="text-white font-medium text-sm">We Load Widget</h4>
+            </div>
+            <p className="text-xs text-[#8A94A6]">Fetch user data, package in widget, return iFrame to your app</p>
+          </div>
+          <div className="glass rounded-xl p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">3</div>
+              <h4 className="text-white font-medium text-sm">Everything In Widget</h4>
+            </div>
+            <p className="text-xs text-[#8A94A6]">Rewards, shop, missions — all interactions happen inside our widget</p>
+          </div>
         </motion.div>
       </div>
     </div>
