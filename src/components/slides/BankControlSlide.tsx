@@ -253,7 +253,7 @@ export default function BankControlSlide() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-[#52AE30] text-base md:text-xl">✓</span>
-                    <h3 className="text-sm md:text-lg font-semibold text-white">Compliance remains with the bank</h3>
+                    <h3 className="text-sm md:text-lg font-semibold text-white">GDPR-aligned by design</h3>
                   </div>
                   <p className="text-xs md:text-base text-[#8A94A6]">
                     No personal data ingestion, storage, or profiling
