@@ -40,18 +40,6 @@ const segments = [
     ],
     outcome: "Cross-sell opportunities",
   },
-  {
-    name: "Business Owners",
-    icon: "📊",
-    color: "#C5A572",
-    highlight: false,
-    journey: [
-      { step: "Business account", xp: 150 },
-      { step: "POS integration", xp: 200 },
-      { step: "Credit line request", xp: 250 },
-    ],
-    outcome: "SMB revenue growth",
-  },
 ];
 
 export default function UserSegmentationSlide() {
@@ -80,7 +68,7 @@ export default function UserSegmentationSlide() {
         </motion.div>
 
         {/* Segments grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4">
           {segments.map((segment, index) => (
             <motion.div
               key={segment.name}
