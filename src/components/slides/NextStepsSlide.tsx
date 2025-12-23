@@ -124,8 +124,8 @@ export default function NextStepsSlide() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.4 }}
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center green-glow">
-                    <span className="text-base md:text-lg font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>iD</span>
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center green-glow overflow-hidden">
+                    <Image src="/idojo-logo.png" alt="iDojo" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
                   </div>
                   <span className="mt-0.5 md:mt-1 text-[8px] md:text-xs text-[#8A94A6]">iDojo</span>
                 </motion.div>

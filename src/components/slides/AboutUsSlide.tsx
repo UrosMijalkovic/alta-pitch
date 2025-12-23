@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const stats = [
   { value: '2015', label: 'Founded', icon: '🚀' },
@@ -100,8 +101,8 @@ export default function AboutUsSlide() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center">
-                <span className="text-white font-bold text-xs" style={{ fontFamily: "'Playfair Display', serif" }}>iD</span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center overflow-hidden">
+                <Image src="/idojo-logo.png" alt="iDojo" width={28} height={28} className="w-6 h-6 object-contain" />
               </div>
               <p className="text-[#8A94A6] text-sm">
                 <span className="text-white font-medium">Gamification Pioneers</span> — Turning engagement into habit
