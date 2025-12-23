@@ -13,6 +13,7 @@ import MissionsSlide from '@/components/slides/MissionsSlide';
 import ProgressionSlide from '@/components/slides/ProgressionSlide';
 import DailyEngagementSlide from '@/components/slides/DailyEngagementSlide';
 import LeaderboardsSlide from '@/components/slides/LeaderboardsSlide';
+import UserSegmentationSlide from '@/components/slides/UserSegmentationSlide';
 import SolvingChallengesSlide from '@/components/slides/SolvingChallengesSlide';
 import BankControlSlide from '@/components/slides/BankControlSlide';
 import IntegrationSlide from '@/components/slides/IntegrationSlide';
@@ -30,12 +31,13 @@ const slides = [
   { id: 7, component: ProgressionSlide, label: 'Progression' },
   { id: 8, component: DailyEngagementSlide, label: 'Daily Engagement' },
   { id: 9, component: LeaderboardsSlide, label: 'Leaderboards' },
-  { id: 10, component: SolvingChallengesSlide, label: 'Solutions Map' },
-  { id: 11, component: BankControlSlide, label: 'Bank Control' },
-  { id: 12, component: IntegrationSlide, label: 'Integration' },
-  { id: 13, component: ROISlide, label: 'ROI' },
-  { id: 14, component: NextStepsSlide, label: 'Next Steps' },
-  { id: 15, component: ThankYouSlide, label: 'Thank You' },
+  { id: 10, component: UserSegmentationSlide, label: 'Segmentation' },
+  { id: 11, component: SolvingChallengesSlide, label: 'Solutions Map' },
+  { id: 12, component: BankControlSlide, label: 'Bank Control' },
+  { id: 13, component: IntegrationSlide, label: 'Integration' },
+  { id: 14, component: ROISlide, label: 'ROI' },
+  { id: 15, component: NextStepsSlide, label: 'Next Steps' },
+  { id: 16, component: ThankYouSlide, label: 'Thank You' },
 ];
 
 export default function Home() {
