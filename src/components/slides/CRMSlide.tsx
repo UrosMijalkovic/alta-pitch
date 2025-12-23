@@ -61,16 +61,22 @@ export default function CRMSlide() {
                 <p className="text-xs md:text-sm text-[#8A94A6] mt-1">Transactions, logins, feature usage</p>
               </motion.div>
 
-              {/* Arrow down */}
+              {/* Arrow down - animated */}
               <motion.div
                 className="flex justify-center"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.2 }}
               >
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
+                <motion.svg
+                  className="w-5 h-5 md:w-6 md:h-6 text-[#52AE30]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                >
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                </motion.svg>
               </motion.div>
 
               {/* Gamification Engine */}
@@ -84,20 +90,32 @@ export default function CRMSlide() {
                 <p className="text-xs md:text-sm text-[#8A94A6] mt-1">Missions • XP • Levels • Rewards</p>
               </motion.div>
 
-              {/* Bidirectional arrows */}
+              {/* Bidirectional arrows - animated */}
               <motion.div
                 className="flex justify-center items-center gap-3"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.2 }}
               >
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#3498DB]" fill="currentColor" viewBox="0 0 20 20">
+                <motion.svg
+                  className="w-5 h-5 md:w-6 md:h-6 text-[#3498DB]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  animate={{ y: [0, 3, 0] }}
+                  transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                >
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                </motion.svg>
                 <span className="text-xs md:text-sm text-[#8A94A6]">Events sync both ways</span>
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#3498DB] rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <motion.svg
+                  className="w-5 h-5 md:w-6 md:h-6 text-[#3498DB] rotate-180"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ repeat: Infinity, duration: 1, ease: "easeInOut", delay: 0.5 }}
+                >
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                </motion.svg>
               </motion.div>
 
               {/* CRM System */}
@@ -111,16 +129,22 @@ export default function CRMSlide() {
                 <p className="text-xs md:text-sm text-[#8A94A6] mt-1">Profiles • Segments • Automations • Campaigns</p>
               </motion.div>
 
-              {/* Arrow down */}
+              {/* Arrow down - animated */}
               <motion.div
                 className="flex justify-center"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.9, duration: 0.2 }}
               >
-                <svg className="w-5 h-5 md:w-6 md:h-6 text-[#C5A572]" fill="currentColor" viewBox="0 0 20 20">
+                <motion.svg
+                  className="w-5 h-5 md:w-6 md:h-6 text-[#C5A572]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+                >
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                </motion.svg>
               </motion.div>
 
               {/* Personalized Response */}
