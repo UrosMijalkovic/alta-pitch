@@ -14,7 +14,7 @@ const integrationPoints = [
     ),
   },
   {
-    label: "Turnkey Solution",
+    label: "Minimal Setup",
     detail: "All widget interactions handled by us",
     icon: (
       <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
