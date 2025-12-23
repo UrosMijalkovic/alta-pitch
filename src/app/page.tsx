@@ -19,6 +19,7 @@ import BankControlSlide from '@/components/slides/BankControlSlide';
 import IntegrationSlide from '@/components/slides/IntegrationSlide';
 import ROISlide from '@/components/slides/ROISlide';
 import NextStepsSlide from '@/components/slides/NextStepsSlide';
+import CRMSlide from '@/components/slides/CRMSlide';
 import ThankYouSlide from '@/components/slides/ThankYouSlide';
 
 const slides = [
@@ -37,7 +38,8 @@ const slides = [
   { id: 13, component: IntegrationSlide, label: 'Integration' },
   { id: 14, component: ROISlide, label: 'ROI' },
   { id: 15, component: NextStepsSlide, label: 'Next Steps' },
-  { id: 16, component: ThankYouSlide, label: 'Thank You' },
+  { id: 16, component: CRMSlide, label: 'CRM' },
+  { id: 17, component: ThankYouSlide, label: 'Thank You' },
 ];
 
 export default function Home() {
