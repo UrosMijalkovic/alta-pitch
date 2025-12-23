@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const timelineSteps = [
   {
@@ -146,8 +147,8 @@ export default function NextStepsSlide() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.4 }}
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-[#52AE30] flex items-center justify-center">
-                    <span className="text-sm md:text-base font-bold text-white">OTP</span>
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                    <Image src="/otp-logo.png" alt="OTP Bank" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
                   </div>
                   <span className="mt-0.5 md:mt-1 text-[8px] md:text-xs text-[#8A94A6]">OTP Bank</span>
                 </motion.div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 export default function ThankYouSlide() {
   return (
@@ -117,8 +118,8 @@ export default function ThankYouSlide() {
 
           {/* OTP logo */}
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#52AE30] flex items-center justify-center">
-              <span className="text-base md:text-xl font-bold text-white">OTP</span>
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-white flex items-center justify-center overflow-hidden">
+              <Image src="/otp-logo.png" alt="OTP Bank" width={56} height={56} className="w-10 h-10 md:w-14 md:h-14 object-contain" />
             </div>
             <span className="mt-2 md:mt-3 text-xs md:text-sm text-[#8A94A6]">OTP Bank</span>
           </div>

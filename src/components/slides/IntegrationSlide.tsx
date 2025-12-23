@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const integrationPoints = [
   {
@@ -81,8 +82,8 @@ export default function IntegrationSlide() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-[#52AE30] flex items-center justify-center mb-1 md:mb-3">
-                <span className="text-white font-bold text-sm md:text-lg">OTP</span>
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-white flex items-center justify-center mb-1 md:mb-3 overflow-hidden">
+                <Image src="/otp-logo.png" alt="OTP Bank" width={56} height={56} className="w-8 h-8 md:w-14 md:h-14 object-contain" />
               </div>
               <p className="text-white font-semibold text-center text-xs md:text-base">OTP Bank App</p>
               <p className="text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 md:mt-1">Auth + UUID</p>
