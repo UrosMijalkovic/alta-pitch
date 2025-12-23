@@ -102,7 +102,7 @@ export default function AboutUsSlide() {
               transition={{ delay: 1, duration: 0.5 }}
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center overflow-hidden">
-                <Image src="/idojo-logo.png" alt="iDojo" width={28} height={28} className="w-6 h-6 object-contain" />
+                <Image src="/idojo-logo.png" alt="iDojo" width={32} height={32} className="w-full h-full object-cover" />
               </div>
               <p className="text-[#8A94A6] text-sm">
                 <span className="text-white font-medium">Gamification Pioneers</span> — Turning engagement into habit

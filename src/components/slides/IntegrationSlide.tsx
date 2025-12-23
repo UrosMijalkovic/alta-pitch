@@ -119,7 +119,7 @@ export default function IntegrationSlide() {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center mb-1 md:mb-2 overflow-hidden">
-                <Image src="/idojo-logo.png" alt="iDojo" width={48} height={48} className="w-8 h-8 md:w-12 md:h-12 object-contain" />
+                <Image src="/idojo-logo.png" alt="iDojo" width={56} height={56} className="w-full h-full object-cover" />
               </div>
               <p className="text-white font-semibold text-center text-xs md:text-base mb-1">iDojo Platform</p>
               <div className="flex flex-wrap justify-center gap-1 md:gap-1.5">

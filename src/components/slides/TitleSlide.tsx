@@ -79,7 +79,7 @@ export default function TitleSlide() {
           {/* iDojo logo */}
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center green-glow overflow-hidden">
-              <Image src="/idojo-logo.png" alt="iDojo" width={56} height={56} className="w-10 h-10 md:w-14 md:h-14 object-contain" />
+              <Image src="/idojo-logo.png" alt="iDojo" width={64} height={64} className="w-full h-full object-cover" />
             </div>
             <span className="mt-2 md:mt-3 text-xs md:text-sm text-[#8A94A6]">iDojo</span>
           </div>
