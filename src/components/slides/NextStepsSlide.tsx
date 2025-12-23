@@ -114,10 +114,7 @@ export default function NextStepsSlide() {
                 Ready to Transform Banking Behavior?
               </motion.h3>
 
-              <p className="text-xs md:text-sm text-[#8A94A6] mb-2 md:mb-3 max-w-xl mx-auto">
-                Schedule a discovery call to explore how iDojo can help OTP Bank achieve its engagement goals.
-              </p>
-
+              
               {/* Partnership logos */}
               <div className="flex items-center justify-center gap-3 md:gap-4 mb-2 md:mb-3">
                 <motion.div
