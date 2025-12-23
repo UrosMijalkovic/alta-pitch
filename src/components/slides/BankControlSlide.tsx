@@ -97,7 +97,7 @@ export default function BankControlSlide() {
             {/* Dashboard content */}
             <div className="p-3 md:p-6">
               {/* Stats row */}
-              <div className="grid grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-6">
+              <div className="grid grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-4">
                 {[
                   { label: 'Active Users', value: '24,521', change: '+12%' },
                   { label: 'Missions Done', value: '8,432', change: '+28%' },
@@ -117,47 +117,104 @@ export default function BankControlSlide() {
                 ))}
               </div>
 
-              {/* Mission config example */}
-              <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4 mb-2 md:mb-4">
-                <div className="flex items-center justify-between mb-2 md:mb-4">
-                  <h4 className="text-xs md:text-sm font-medium text-white">Mission: Salary Migration</h4>
-                  <span className="px-1.5 md:px-2 py-0.5 md:py-1 rounded text-[8px] md:text-xs bg-[#52AE30]/20 text-[#52AE30]">Active</span>
+              {/* Analytics section */}
+              <div className="grid grid-cols-2 gap-2 md:gap-3">
+                {/* Engagement Chart */}
+                <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3">
+                  <p className="text-[8px] md:text-xs text-[#8A94A6] mb-2">Weekly Engagement</p>
+                  <div className="flex items-end gap-1 h-12 md:h-16">
+                    {[35, 45, 38, 52, 48, 65, 72].map((height, i) => (
+                      <motion.div
+                        key={i}
+                        className="flex-1 bg-[#52AE30] rounded-t"
+                        initial={{ height: 0 }}
+                        animate={{ height: `${height}%` }}
+                        transition={{ delay: 0.6 + i * 0.05, duration: 0.4 }}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex justify-between mt-1 text-[6px] md:text-[8px] text-[#8A94A6]">
+                    <span>Mon</span>
+                    <span>Sun</span>
+                  </div>
                 </div>
-                <div className="space-y-2 md:space-y-3">
-                  {[
-                    { step: 'Request form', xp: 30 },
-                    { step: 'Submit to employer', xp: 50 },
-                    { step: 'First salary received', xp: 200 },
-                  ].map((step, index) => (
-                    <motion.div
-                      key={step.step}
-                      className="flex items-center justify-between text-xs md:text-sm"
-                      initial={{ x: -10, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.7 + index * 0.1, duration: 0.3 }}
-                    >
-                      <span className="text-[#8A94A6]">{step.step}</span>
-                      <div className="flex items-center gap-1.5 md:gap-2">
-                        <span className="text-white font-medium">+{step.xp} XP</span>
-                        <button className="text-[#52AE30] hover:text-[#7BC962]">
-                          <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                          </svg>
-                        </button>
-                      </div>
-                    </motion.div>
-                  ))}
+
+                {/* Conversion Funnel */}
+                <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3">
+                  <p className="text-[8px] md:text-xs text-[#8A94A6] mb-2">Salary Migration Funnel</p>
+                  <div className="space-y-1">
+                    {[
+                      { label: 'Started', value: 100, color: '#52AE30' },
+                      { label: 'Form Sent', value: 72, color: '#7BC962' },
+                      { label: 'Completed', value: 48, color: '#C5A572' },
+                    ].map((step, i) => (
+                      <motion.div
+                        key={step.label}
+                        className="relative"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.7 + i * 0.1, duration: 0.3 }}
+                      >
+                        <div
+                          className="h-3 md:h-4 rounded"
+                          style={{
+                            width: `${step.value}%`,
+                            backgroundColor: step.color,
+                          }}
+                        />
+                        <div className="flex justify-between text-[6px] md:text-[8px] mt-0.5">
+                          <span className="text-[#8A94A6]">{step.label}</span>
+                          <span className="text-white">{step.value}%</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Control buttons */}
-              <div className="flex gap-2">
-                <button className="flex-1 py-1.5 md:py-2 px-2 md:px-4 bg-[#52AE30] text-white rounded-md md:rounded-lg text-xs md:text-sm font-medium hover:bg-[#7BC962] transition-colors">
-                  Edit Mission
-                </button>
-                <button className="flex-1 py-1.5 md:py-2 px-2 md:px-4 bg-[#1A222C] text-white rounded-md md:rounded-lg text-xs md:text-sm font-medium hover:bg-[#2A323C] transition-colors">
-                  View Analytics
-                </button>
+              {/* Line chart area */}
+              <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3 mt-2 md:mt-3">
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-[8px] md:text-xs text-[#8A94A6]">Mission Completion Trend</p>
+                  <div className="flex gap-2 text-[6px] md:text-[8px]">
+                    <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-[#52AE30]" />This Week</span>
+                    <span className="flex items-center gap-1 text-[#8A94A6]"><span className="w-1.5 h-1.5 rounded-full bg-[#3498DB]" />Last Week</span>
+                  </div>
+                </div>
+                <svg className="w-full h-10 md:h-14" viewBox="0 0 200 50" preserveAspectRatio="none">
+                  {/* Last week line */}
+                  <motion.path
+                    d="M0,40 Q25,35 50,38 T100,32 T150,28 T200,25"
+                    fill="none"
+                    stroke="#3498DB"
+                    strokeWidth="1.5"
+                    strokeOpacity="0.4"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ delay: 0.8, duration: 1 }}
+                  />
+                  {/* This week line */}
+                  <motion.path
+                    d="M0,38 Q25,30 50,28 T100,20 T150,15 T200,8"
+                    fill="none"
+                    stroke="#52AE30"
+                    strokeWidth="2"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ delay: 0.9, duration: 1 }}
+                  />
+                  {/* Glow effect */}
+                  <motion.path
+                    d="M0,38 Q25,30 50,28 T100,20 T150,15 T200,8"
+                    fill="none"
+                    stroke="#52AE30"
+                    strokeWidth="4"
+                    strokeOpacity="0.3"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ delay: 0.9, duration: 1 }}
+                  />
+                </svg>
               </div>
             </div>
           </motion.div>
