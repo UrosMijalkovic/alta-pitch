@@ -16,7 +16,7 @@ export default function CRMSlide() {
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-4 md:mb-8 text-center"
+          className="mb-3 md:mb-8 text-center"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -36,23 +36,23 @@ export default function CRMSlide() {
         </motion.div>
 
         {/* Main content - Diagram + Features */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6">
           {/* Left: Integration Diagram */}
           <motion.div
-            className="glass rounded-xl md:rounded-2xl p-4 md:p-6"
+            className="glass rounded-lg md:rounded-2xl p-3 md:p-6"
             initial={{ x: -40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h4 className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-wider mb-4 md:mb-5">
+            <h4 className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-wider mb-2 md:mb-5">
               The Feedback Loop
             </h4>
 
             {/* Diagram */}
-            <div className="space-y-3 md:space-y-4">
+            <div className="space-y-2 md:space-y-4">
               {/* User Actions */}
               <motion.div
-                className="bg-[#1A222C] rounded-xl p-3 md:p-4 text-center"
+                className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4 text-center"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.3 }}
@@ -81,7 +81,7 @@ export default function CRMSlide() {
 
               {/* Gamification Engine */}
               <motion.div
-                className="bg-gradient-to-r from-[#52AE30]/20 to-[#006837]/20 border border-[#52AE30]/40 rounded-xl p-3 md:p-4 text-center"
+                className="bg-gradient-to-r from-[#52AE30]/20 to-[#006837]/20 border border-[#52AE30]/40 rounded-lg md:rounded-xl p-2 md:p-4 text-center"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.3 }}
@@ -120,7 +120,7 @@ export default function CRMSlide() {
 
               {/* CRM System */}
               <motion.div
-                className="bg-gradient-to-r from-[#3498DB]/20 to-[#9B59B6]/20 border border-[#3498DB]/40 rounded-xl p-3 md:p-4 text-center"
+                className="bg-gradient-to-r from-[#3498DB]/20 to-[#9B59B6]/20 border border-[#3498DB]/40 rounded-lg md:rounded-xl p-2 md:p-4 text-center"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.3 }}
@@ -149,7 +149,7 @@ export default function CRMSlide() {
 
               {/* Personalized Response */}
               <motion.div
-                className="bg-[#1A222C] rounded-xl p-3 md:p-4 text-center"
+                className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4 text-center"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.3 }}
@@ -162,19 +162,19 @@ export default function CRMSlide() {
 
           {/* Right: Features */}
           <motion.div
-            className="glass rounded-xl md:rounded-2xl p-4 md:p-6 flex flex-col"
+            className="glass rounded-lg md:rounded-2xl p-3 md:p-6 flex flex-col"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h4 className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-wider mb-4 md:mb-5">
+            <h4 className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-wider mb-2 md:mb-5">
               CRM Includes
             </h4>
-            <div className="flex-1 grid grid-cols-1 gap-3 md:gap-4">
+            <div className="flex-1 grid grid-cols-1 gap-2 md:gap-4">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  className="bg-[#1A222C] rounded-xl p-3 md:p-4 flex items-start gap-3"
+                  className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4 flex items-start gap-2 md:gap-3"
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.08, duration: 0.3 }}
@@ -192,7 +192,7 @@ export default function CRMSlide() {
 
         {/* Bottom note */}
         <motion.div
-          className="mt-4 md:mt-6 text-center"
+          className="mt-3 md:mt-6 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1, duration: 0.5 }}
