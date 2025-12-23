@@ -96,13 +96,22 @@ export default function SolvingChallengesSlide() {
             <motion.div
               key={item.pain}
               className="glass rounded-lg md:rounded-xl overflow-hidden group hover:border-[#52AE30]/50 transition-all duration-300"
-              initial={{ x: index % 2 === 0 ? -40 : 40, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+              initial={{ y: 20, opacity: 0, scale: 0.98 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.3 + index * 0.25,
+                duration: 0.6,
+                ease: "easeOut"
+              }}
             >
               <div className="flex flex-col md:flex-row">
                 {/* Pain point side */}
-                <div className="flex-1 p-2 md:p-3 border-b md:border-b-0 md:border-r border-white/5 relative">
+                <motion.div
+                  className="flex-1 p-2 md:p-3 border-b md:border-b-0 md:border-r border-white/5 relative"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + index * 0.25, duration: 0.4 }}
+                >
                   <div
                     className="absolute top-0 left-0 w-1 h-full"
                     style={{ backgroundColor: item.color }}
@@ -119,14 +128,14 @@ export default function SolvingChallengesSlide() {
                       <p className="text-[10px] md:text-xs text-[#8A94A6]">{item.painDetail}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Arrow connector */}
                 <div className="hidden md:flex items-center justify-center px-4">
                   <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.7 + index * 0.25, duration: 0.3, ease: "backOut" }}
                   >
                     <svg className="w-6 h-6 md:w-8 md:h-8 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -135,7 +144,12 @@ export default function SolvingChallengesSlide() {
                 </div>
 
                 {/* Solution side */}
-                <div className="flex-1 p-2 md:p-3 bg-[#52AE30]/5 relative">
+                <motion.div
+                  className="flex-1 p-2 md:p-3 bg-[#52AE30]/5 relative"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 + index * 0.25, duration: 0.4 }}
+                >
                   <div className="absolute top-0 left-0 w-1 h-full bg-[#52AE30] md:hidden" />
                   <div className="flex items-center gap-2 md:gap-3 pl-2 md:pl-0">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#52AE30]/20 text-[#52AE30]">
@@ -148,7 +162,7 @@ export default function SolvingChallengesSlide() {
                       <p className="text-[10px] md:text-xs text-[#8A94A6]">{item.solutionDetail}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
