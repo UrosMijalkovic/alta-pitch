@@ -166,7 +166,7 @@ export default function NextStepsSlide() {
                 <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#52AE30] animate-pulse" />
                 <span className="text-xs md:text-sm text-[#8A94A6]">
                   Contact us at{' '}
-                  <span className="text-[#52AE30] font-medium">hello@idojo.io</span>
+                  <span className="text-[#52AE30] font-medium">mijalkovic@miracledojo.com</span>
                 </span>
               </motion.div>
             </div>

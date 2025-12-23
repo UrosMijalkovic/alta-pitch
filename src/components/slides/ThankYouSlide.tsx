@@ -132,9 +132,9 @@ export default function ThankYouSlide() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <p className="text-[#8A94A6] text-xs md:text-sm">
-            <span className="text-[#52AE30] font-medium">hello@idojo.io</span>
+            <span className="text-[#52AE30] font-medium">mijalkovic@miracledojo.com</span>
             {' '}&bull;{' '}
-            <span className="text-white font-medium">idojo.io</span>
+            <span className="text-white font-medium">miracledojo.com</span>
           </p>
         </motion.div>
       </div>
