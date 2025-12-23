@@ -91,9 +91,6 @@ export default function ROISlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
-            What Others Achieved
-          </span>
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
@@ -101,7 +98,7 @@ export default function ROISlide() {
             Industry <span className="gradient-text">Benchmarks</span>
           </h2>
           <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
-            Our goal is to achieve these results together with OTP
+            Our goal is to achieve these and better results together with OTP
           </p>
         </motion.div>
 
