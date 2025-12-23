@@ -12,7 +12,7 @@ const painPoints = [
     title: "Acquisition ≠ Activation",
     description: "App installs don't become daily banking habits",
     stat: "~90%",
-    statLabel: "users inactive after 30 days*",
+    statLabel: "inactive after 30 days*",
     color: "#FF6B6B",
   },
   {
