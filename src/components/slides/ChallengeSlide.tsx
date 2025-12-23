@@ -11,8 +11,8 @@ const painPoints = [
     ),
     title: "Acquisition ≠ Activation",
     description: "App installs don't become daily banking habits",
-    stat: "70%",
-    statLabel: "users inactive after 30 days",
+    stat: "~90%",
+    statLabel: "users inactive after 30 days*",
     color: "#FF6B6B",
   },
   {
@@ -35,8 +35,8 @@ const painPoints = [
     ),
     title: "Weak Daily Engagement",
     description: "Open when needed, not daily",
-    stat: "2.3x",
-    statLabel: "monthly vs weekly opens",
+    stat: "Low",
+    statLabel: "DAU vs MAU ratio*",
     color: "#52AE30",
   },
   {
@@ -47,8 +47,8 @@ const painPoints = [
     ),
     title: "Passive Feature Discovery",
     description: "Users don't find the features you've built",
-    stat: "40%",
-    statLabel: "features never used",
+    stat: "~94%",
+    statLabel: "features underused*",
     color: "#9B59B6",
   },
   {
@@ -59,8 +59,8 @@ const painPoints = [
     ),
     title: "Promo Dependency",
     description: "Retention is rented, not owned",
-    stat: "-45%",
-    statLabel: "engagement post-promo",
+    stat: "Sharp",
+    statLabel: "drop-off post-promo*",
     color: "#3498DB",
   },
 ];
@@ -148,6 +148,18 @@ export default function ChallengeSlide() {
         <p className="text-sm md:text-lg text-[#8A94A6] max-w-3xl mx-auto">
           OTP&apos;s pain is not acquisition—it&apos;s turning users into{' '}
           <span className="text-[#52AE30] font-medium">habitual, high-value customers</span>.
+        </p>
+      </motion.div>
+
+      {/* Sources footnote */}
+      <motion.div
+        className="mt-3 md:mt-4 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        <p className="text-[8px] md:text-[10px] text-[#8A94A6]/60 max-w-4xl mx-auto">
+          *Sources: UXCam, Business of Apps, Sendbird mobile retention benchmarks 2025; Pendo feature adoption analysis; OneSignal engagement metrics
         </p>
       </motion.div>
     </div>
