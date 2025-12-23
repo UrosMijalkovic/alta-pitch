@@ -92,16 +92,16 @@ export default function ROISlide() {
           transition={{ duration: 0.6 }}
         >
           <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
-            Industry Benchmarks
+            What Others Achieved
           </span>
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Proven <span className="gradient-text">Impact</span>
+            Industry <span className="gradient-text">Benchmarks</span>
           </h2>
           <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
-            Real results from gamification in banking and fintech
+            Our goal is to achieve these results together with OTP
           </p>
         </motion.div>
 
