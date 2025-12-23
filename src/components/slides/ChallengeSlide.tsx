@@ -93,7 +93,7 @@ export default function ChallengeSlide() {
         {painPoints.map((point, index) => (
           <motion.div
             key={point.title}
-            className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#52AE30]/50 transition-all duration-300"
+            className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#52AE30]/50 transition-all duration-300 flex flex-col"
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
@@ -104,26 +104,29 @@ export default function ChallengeSlide() {
               style={{ backgroundColor: point.color }}
             />
 
-            {/* Icon */}
-            <div
-              className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center mb-2 md:mb-3"
-              style={{ backgroundColor: `${point.color}20`, color: point.color }}
-            >
-              {point.icon}
+            {/* Content wrapper */}
+            <div className="flex-1">
+              {/* Icon */}
+              <div
+                className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center mb-2 md:mb-3"
+                style={{ backgroundColor: `${point.color}20`, color: point.color }}
+              >
+                {point.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xs md:text-sm font-semibold text-white mb-0.5 md:mb-1 leading-tight">
+                {point.title}
+              </h3>
+
+              {/* Description - hidden on small mobile */}
+              <p className="hidden sm:block text-[10px] md:text-xs text-[#8A94A6] leading-relaxed min-h-[2.5rem] md:min-h-[3rem]">
+                {point.description}
+              </p>
             </div>
 
-            {/* Title */}
-            <h3 className="text-xs md:text-sm font-semibold text-white mb-0.5 md:mb-1 leading-tight">
-              {point.title}
-            </h3>
-
-            {/* Description - hidden on small mobile */}
-            <p className="hidden sm:block text-[10px] md:text-xs text-[#8A94A6] mb-2 md:mb-3 leading-relaxed">
-              {point.description}
-            </p>
-
-            {/* Stat */}
-            <div className="pt-2 md:pt-3 border-t border-white/5">
+            {/* Stat - always at bottom */}
+            <div className="pt-2 md:pt-3 border-t border-white/5 mt-auto">
               <div className="flex items-baseline gap-1 md:gap-2">
                 <span
                   className="text-xl md:text-2xl font-bold"
