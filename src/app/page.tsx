@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Slide Components
@@ -41,6 +41,9 @@ const slides = [
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const minSwipeDistance = 50;
 
   const goToSlide = useCallback((index: number) => {
     if (index >= 0 && index < slides.length) {
@@ -84,6 +87,33 @@ export default function Home() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide, goToSlide]);
 
+  // Touch swipe handlers
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  }, []);
+
+  const onTouchEnd = useCallback(() => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  }, [nextSlide, prevSlide]);
+
   const CurrentSlideComponent = slides[currentSlide].component;
 
   const slideVariants = {
@@ -105,7 +135,12 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen w-screen overflow-hidden relative bg-[#0A0F14]">
+    <main
+      className="h-screen w-screen overflow-hidden relative bg-[#0A0F14]"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* Noise overlay */}
       <div className="noise-overlay" />
 
@@ -204,9 +239,30 @@ export default function Home() {
         <span>Use arrow keys to navigate</span>
       </div>
 
+      {/* Mobile tap zones for navigation */}
+      <button
+        onClick={prevSlide}
+        disabled={currentSlide === 0}
+        className={`md:hidden fixed left-0 top-0 bottom-16 w-16 z-40 ${
+          currentSlide === 0 ? 'pointer-events-none' : ''
+        }`}
+        aria-label="Previous slide"
+      />
+      <button
+        onClick={nextSlide}
+        disabled={currentSlide === slides.length - 1}
+        className={`md:hidden fixed right-0 top-0 bottom-16 w-16 z-40 ${
+          currentSlide === slides.length - 1 ? 'pointer-events-none' : ''
+        }`}
+        aria-label="Next slide"
+      />
+
       {/* Swipe hint - mobile only */}
       <div className="flex md:hidden fixed bottom-4 left-4 z-50 items-center gap-1 text-[10px] text-[#8A94A6]">
-        <span>Swipe or tap arrows</span>
+        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+        <span>Swipe to navigate</span>
       </div>
     </main>
   );
