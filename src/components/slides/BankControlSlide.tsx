@@ -42,14 +42,6 @@ const controlFeatures = [
   },
 ];
 
-const compliancePoints = [
-  "No randomness or chance mechanics",
-  "All rewards tied to verifiable actions",
-  "Full audit trail of all transactions",
-  "User-controlled participation",
-  "Compliant with banking regulations",
-  "GDPR-ready data handling",
-];
 
 export default function BankControlSlide() {
   return (
@@ -245,40 +237,28 @@ export default function BankControlSlide() {
               ))}
             </motion.div>
 
-            {/* Compliance card */}
+            {/* GDPR Compliance card */}
             <motion.div
               className="glass rounded-lg md:rounded-2xl p-3 md:p-6"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#52AE30] flex items-center justify-center">
-                  <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-[#52AE30] flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold text-white">Zero Regulatory Risk</h3>
-                  <p className="text-xs md:text-sm text-[#8A94A6]">Built for banking compliance</p>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[#52AE30] text-base md:text-xl">✓</span>
+                    <h3 className="text-sm md:text-lg font-semibold text-white">Compliance remains with the bank</h3>
+                  </div>
+                  <p className="text-xs md:text-base text-[#8A94A6]">
+                    No personal data ingestion, storage, or profiling
+                  </p>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 md:gap-3">
-                {compliancePoints.map((point, index) => (
-                  <motion.div
-                    key={point}
-                    className="flex items-center gap-1.5 md:gap-2"
-                    initial={{ x: -10, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.8 + index * 0.05, duration: 0.3 }}
-                  >
-                    <svg className="w-3 h-3 md:w-4 md:h-4 text-[#52AE30] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-[10px] md:text-sm text-[#8A94A6]">{point}</span>
-                  </motion.div>
-                ))}
               </div>
             </motion.div>
           </div>
