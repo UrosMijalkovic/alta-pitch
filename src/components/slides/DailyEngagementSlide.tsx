@@ -218,16 +218,28 @@ export default function DailyEngagementSlide() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           {[
-            { label: 'Avg streak', value: '12 days' },
-            { label: 'DAU increase', value: '+45%' },
-            { label: 'Retention lift', value: '+38%' },
-            { label: 'Sessions/week', value: '5.2' },
+            { label: 'Avg streak*', value: '12 days' },
+            { label: 'DAU increase*', value: '+45%' },
+            { label: 'Retention lift*', value: '+38%' },
+            { label: 'Sessions/week*', value: '5.2' },
           ].map((stat) => (
             <div key={stat.label} className="glass rounded-md md:rounded-lg p-1.5 md:p-2 text-center">
               <p className="text-sm md:text-xl font-bold text-[#52AE30]">{stat.value}</p>
               <p className="text-[8px] md:text-[10px] text-[#8A94A6] mt-0.5">{stat.label}</p>
             </div>
           ))}
+        </motion.div>
+
+        {/* Sources footnote */}
+        <motion.div
+          className="mt-2 md:mt-3 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+          <p className="text-[8px] md:text-[10px] text-[#8A94A6]/60 max-w-4xl mx-auto">
+            *Sources: Localytics Engagement Benchmarks; OneSignal Retention Benchmarks; AppsFlyer Loyalty Report; Braze Lifecycle Engagement Report; Adjust mobile retention benchmarks; habit formation research (Lally et al.)
+          </p>
         </motion.div>
       </div>
     </div>
