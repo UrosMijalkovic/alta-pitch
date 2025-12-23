@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react';
 const metrics = [
   {
     label: "Daily Active Users",
-    current: "12%",
-    target: "+40%",
+    value: "+22%",
+    description: "After gamified onboarding",
     icon: (
       <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -16,34 +16,34 @@ const metrics = [
     color: "#52AE30",
   },
   {
-    label: "Feature Activation",
-    current: "35%",
-    target: "+60%",
+    label: "60-Day Retention",
+    value: "+15%",
+    description: "With reward-based goal tracking",
     icon: (
       <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
     color: "#3498DB",
   },
   {
-    label: "Salary Migration",
-    current: "8%",
-    target: "+25%",
+    label: "Deposit Increase",
+    value: "+32%",
+    description: "After gamified savings features",
     icon: (
       <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
     color: "#C5A572",
   },
   {
-    label: "90-Day Retention",
-    current: "42%",
-    target: "+35%",
+    label: "Online Bill Payments",
+    value: "+26%",
+    description: "Through engagement mechanics",
     icon: (
       <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
     color: "#9B59B6",
@@ -92,16 +92,16 @@ export default function ROISlide() {
           transition={{ duration: 0.6 }}
         >
           <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
-            ROI Projection
+            Industry Benchmarks
           </span>
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Measurable <span className="gradient-text">Impact</span>
+            Proven <span className="gradient-text">Impact</span>
           </h2>
           <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
-            Every metric trackable in real-time with clear ROI visibility
+            Real results from gamification in banking and fintech
           </p>
         </motion.div>
 
@@ -130,96 +130,76 @@ export default function ROISlide() {
                   {metric.icon}
                 </div>
 
+                {/* Value */}
+                <motion.span
+                  className="text-2xl md:text-4xl font-bold block mb-1"
+                  style={{ color: metric.color }}
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
+                >
+                  {metric.value}
+                </motion.span>
+
                 {/* Label */}
-                <p className="text-[#8A94A6] text-[10px] md:text-sm mb-1 md:mb-2">{metric.label}</p>
+                <p className="text-white font-medium text-[10px] md:text-sm">{metric.label}</p>
 
-                {/* Target */}
-                <div className="flex items-end gap-1 md:gap-2">
-                  <motion.span
-                    className="text-2xl md:text-4xl font-bold"
-                    style={{ color: metric.color }}
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                  >
-                    {metric.target}
-                  </motion.span>
-                  <span className="text-[#8A94A6] text-[8px] md:text-sm mb-0.5 md:mb-1">target</span>
-                </div>
-
-                {/* Current baseline */}
-                <p className="text-[8px] md:text-xs text-[#8A94A6] mt-1 md:mt-2">
-                  Current: <span className="text-white">{metric.current}</span>
-                </p>
+                {/* Description */}
+                <p className="text-[8px] md:text-xs text-[#8A94A6] mt-0.5 md:mt-1">{metric.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Impact summary */}
+        {/* Hero metric */}
         <motion.div
-          className="glass rounded-lg md:rounded-xl p-3 md:p-6"
+          className="glass rounded-lg md:rounded-xl p-4 md:p-6 mb-3 md:mb-4"
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          <div className="grid grid-cols-3 gap-2 md:gap-4">
-            {/* Engagement lift */}
-            <div className="text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            <div className="text-center md:text-left">
               <motion.div
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#52AE30] mb-1 md:mb-2"
+                className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#52AE30] mb-1 md:mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                <AnimatedCounter target={40} />%
+                +<AnimatedCounter target={270} />%
               </motion.div>
-              <p className="text-white font-medium text-xs md:text-base">Engagement Lift</p>
-              <p className="text-[8px] md:text-sm text-[#8A94A6] mt-0.5 md:mt-1">Average across all metrics</p>
+              <p className="text-white font-medium text-sm md:text-xl">Transaction Volume Increase</p>
+              <p className="text-[10px] md:text-sm text-[#8A94A6] mt-1">After adding gamified financial missions</p>
             </div>
 
-            {/* Cost reduction */}
-            <div className="text-center border-x border-white/5 px-2 md:px-8">
-              <motion.div
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#3498DB] mb-1 md:mb-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                <AnimatedCounter target={60} />%
-              </motion.div>
-              <p className="text-white font-medium text-xs md:text-base">Lower Acquisition Cost</p>
-              <p className="text-[8px] md:text-sm text-[#8A94A6] mt-0.5 md:mt-1">Through organic engagement</p>
-            </div>
+            <div className="hidden md:block w-px h-20 bg-white/10" />
 
-            {/* LTV increase */}
-            <div className="text-center">
-              <motion.div
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#C5A572] mb-1 md:mb-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                <AnimatedCounter target={25} />%
-              </motion.div>
-              <p className="text-white font-medium text-xs md:text-base">Higher Customer LTV</p>
-              <p className="text-[8px] md:text-sm text-[#8A94A6] mt-0.5 md:mt-1">From salary migration</p>
+            <div className="flex gap-4 md:gap-8">
+              <div className="text-center">
+                <div className="text-xl md:text-3xl font-bold text-[#3498DB]">Real</div>
+                <p className="text-[10px] md:text-sm text-[#8A94A6]">Industry Data</p>
+              </div>
+              <div className="text-center">
+                <div className="text-xl md:text-3xl font-bold text-[#C5A572]">Proven</div>
+                <p className="text-[10px] md:text-sm text-[#8A94A6]">Results</p>
+              </div>
+              <div className="text-center">
+                <div className="text-xl md:text-3xl font-bold text-[#9B59B6]">Trackable</div>
+                <p className="text-[10px] md:text-sm text-[#8A94A6]">Metrics</p>
+              </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Bottom note */}
+        {/* Sources */}
         <motion.div
-          className="mt-3 md:mt-4 text-center"
+          className="text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 md:gap-3 glass rounded-full px-3 md:px-6 py-2 md:py-3">
-            <svg className="w-4 h-4 md:w-5 md:h-5 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-            </svg>
-            <p className="text-[#8A94A6] text-xs md:text-base">
-              All projections based on{' '}
-              <span className="text-[#52AE30] font-medium">industry benchmarks</span>
-              {' '}and{' '}
-              <span className="text-[#52AE30] font-medium">similar implementations</span>
-            </p>
-          </div>
+          <p className="text-[8px] md:text-[10px] text-[#8A94A6]/70 max-w-3xl mx-auto leading-relaxed">
+            *Sources: Tapix summary of Deloitte-referenced findings, Mastercard x Flourish Fi,
+            Systematic Review on Gamification in Fintech (2025), Adjust & App Annie report on banking app loyalty
+          </p>
         </motion.div>
       </div>
     </div>
