@@ -10,7 +10,7 @@ const timelineSteps = [
     description: "Define missions, rewards, and progression tailored to OTP's goals",
   },
   {
-    week: "Week 3-4",
+    week: "Week 2-4",
     title: "Mission Design for OTP",
     description: "Create banking-specific journeys: onboarding, card activation, salary migration",
   },
