@@ -1,0 +1,404 @@
+================================================================================
+                    OTP BANK PITCH PRESENTATION
+                    Transforming Banking Behavior
+                    A Native Engagement Engine for OTP Bank
+                    iDojo x OTP Partnership
+================================================================================
+
+
+================================================================================
+SLIDE 1: TITLE
+================================================================================
+
+TRANSFORMING BANKING BEHAVIOR
+
+A Native Engagement Engine for OTP Bank
+
+iDojo x OTP Bank Partnership
+
+"Press arrow to continue"
+
+
+================================================================================
+SLIDE 2: ABOUT US - MIRACLE DOJO
+================================================================================
+
+WHO WE ARE?
+
+Gamification pioneers with a decade of game development expertise
+
+KEY STATS:
+- Founded: 2015
+- Team: 10+ Gaming Veterans
+- Players Worldwide: 1M+
+- Games Shipped: 6
+
+EXPERTISE AREAS:
+1. iDojo Platform - Gamification as a service
+2. Celebrities - Celebrity-driven experiences
+3. Education & Brands - Engagement solutions
+4. Sport - Karate / Karate Combat
+
+"Gamification Pioneers - Turning engagement into habit"
+
+[Video: Our Games Showreel - portfolio.m4v]
+
+
+================================================================================
+SLIDE 3: THE CHALLENGE
+================================================================================
+
+THE REAL PROBLEM ISN'T ACQUISITION
+
+OTP's pain is not acquisition - it's turning users into habitual, high-value customers.
+
+PAIN POINTS:
+
+1. Acquisition ≠ Activation
+   - App installs don't become daily banking habits
+   - 70% users inactive after 30 days
+
+2. Salary Migration Bottleneck
+   - The #1 KPI that converts users to high-LTV customers
+   - <15% salary migration rate
+
+3. Weak Daily Engagement
+   - "Open when needed, not daily" - no habit formation
+   - 2.3x monthly vs weekly opens
+
+4. Passive Feature Discovery
+   - Users don't find the features you've built
+   - 40% features never used
+
+5. Promo Dependency
+   - Retention is rented through campaigns, not owned
+   - -45% engagement post-promo
+
+
+================================================================================
+SLIDE 4: THE INSIGHT
+================================================================================
+
+USERS NEED PROGRESS, NOT JUST PRODUCTS
+
+People are motivated by visible progress toward meaningful goals
+
+USER JOURNEY:
+New User -> Basic User -> Engaged User -> Premium Customer -> Salary Client
+   0%          25%           50%              75%              100%
+
+KEY STAT:
+3x - Near-miss moments convert better than generic calls-to-action
+
+"You're 80% to unlocking Premium benefits"
+- The psychology that drives action
+
+
+================================================================================
+SLIDE 5: THE SOLUTION
+================================================================================
+
+A NATIVE BEHAVIORAL ENGINE
+
+Embedded seamlessly into OTP's app experience, driving engagement through proven behavioral mechanics.
+
+CORE FEATURES:
+
+1. Missions System
+   - Guide users step-by-step through meaningful banking actions
+
+2. Progression Levels
+   - Visible advancement that motivates continued engagement
+
+3. Daily Engagement Hooks
+   - Compelling reasons to return to the app every day
+
+4. Earned Rewards
+   - Tied to commitment and actions, not random giveaways
+
+[Phone Mockup showing:]
+- "Good morning, Marko"
+- Total Balance: €12,450.00
+- Your Progress: Level 3 - Active
+- 650 / 1000 XP (35% to Level 4)
+- Active Mission: Savings Champion (2 of 5 steps complete) +150 XP
+
+
+================================================================================
+SLIDE 6: HOW IT WORKS - MISSIONS
+================================================================================
+
+GUIDED JOURNEYS, NOT FEATURE LISTS
+
+Step-by-step missions transform complex actions into achievable goals
+
+MISSION CATEGORIES:
+
+1. ONBOARDING (66% complete)
+   [✓] Complete your profile (+50 XP)
+   [✓] Enable biometrics (+30 XP)
+   [ ] Set up notifications (+20 XP)
+
+2. CARD ACTIVATION (33% complete)
+   [✓] Activate your card (+50 XP)
+   [ ] Add to digital wallet (+40 XP)
+   [ ] Make 3 contactless payments (+60 XP)
+
+3. SAVINGS JOURNEY (100% complete)
+   [✓] Create a savings goal (+40 XP)
+   [✓] Save 5 times (+75 XP)
+   [✓] Reach first milestone (+100 XP)
+
+4. SALARY MIGRATION (66% complete)
+   [✓] Request salary change form (+30 XP)
+   [✓] Submit to employer (+50 XP)
+   [ ] Receive first salary (+200 XP)
+
+"Each completed mission unlocks the next, creating a natural progression path"
+
+
+================================================================================
+SLIDE 7: HOW IT WORKS - PROGRESSION
+================================================================================
+
+MAKE GROWTH VISIBLE
+
+Clear levels and meaningful milestones drive continued engagement
+
+LEVEL PROGRESSION:
+1. Starter (0 XP) - Basic rewards, Standard missions
+2. Active (500 XP) - 5% bonus XP, Daily challenges
+3. Engaged (1,500 XP) - 10% bonus XP, Premium missions, Priority support
+4. Premium (3,500 XP) - 15% bonus XP, Exclusive rewards, Early access
+5. Elite (7,500 XP) - 20% bonus XP, VIP status, All benefits
+
+CURRENT PROGRESS EXAMPLE:
+- Current Level: Engaged (Level 3)
+- XP: 2,100 / 3,500 XP
+- Progress: 30% to Premium
+
+"You're 30% to unlocking Premium benefits!"
+
+NEXT LEVEL BENEFITS (Premium):
+- 15% bonus XP [Locked]
+- Exclusive rewards [Locked]
+- Early access [Locked]
+
+
+================================================================================
+SLIDE 8: HOW IT WORKS - DAILY ENGAGEMENT
+================================================================================
+
+BUILD HABITS, NOT CAMPAIGNS
+
+Daily login rewards create consistent engagement without expensive promotions
+
+WEEKLY STREAK (Day 5 of 7):
+- Mon: [✓] Claimed
+- Tue: [✓] Claimed
+- Wed: [✓] Claimed
+- Thu: [✓] Claimed
+- Fri: +35 (Special bonus day)
+- Sat: +40
+- Sun: +100 (Week completion bonus)
+
+"5 day streak! Don't break your streak! Complete Day 5 for +35 bonus XP"
+
+MONTHLY CHALLENGE:
+- 18 of 30 days completed (60% progress)
+- Completion bonus: +500 XP
+- Milestones: Day 7 [✓], Day 14 [✓], Day 21 [ ], Day 30 [ ]
+
+KEY METRICS:
+- Average streak length: 12 days
+- DAU increase: +45%
+- Retention lift: +38%
+- Avg. sessions/week: 5.2
+
+
+================================================================================
+SLIDE 9: HOW IT WORKS - LEADERBOARDS & SHOP
+================================================================================
+
+CREATE COMMUNITY & CHOICE
+
+Leaderboards drive friendly competition while the shop offers meaningful rewards
+
+WEEKLY LEADERBOARD (Based on engagement, not spending):
+Resets in: 3d 14h
+
+| Rank | Name     | Level   | XP     |
+|------|----------|---------|--------|
+| 1    | Ana M.   | Elite   | 12,450 |
+| 2    | Marko K. | Elite   | 11,200 |
+| 3    | Sara P.  | Premium | 10,850 |
+| 4    | You      | Premium | 9,720  |
+| 5    | Ivan T.  | Premium | 9,100  |
+
+"You're #4! Earn 621 more XP to reach the podium"
+
+REWARDS SHOP (Your Points: 2,450 pts):
+- Premium Card Design - 500 pts (Exclusive)
+- Fee-Free Month - 1,000 pts (Benefits)
+- Priority Support - 750 pts (Services)
+- Airport Lounge Pass - 2,000 pts (Travel)
+
+"Prestige Rewards - Limited items for Elite members"
+
+
+================================================================================
+SLIDE 10: SOLVING OTP'S SPECIFIC CHALLENGES
+================================================================================
+
+SOLVING OTP'S SPECIFIC CHALLENGES
+
+Direct mapping from pain points to proven solutions
+
+| OTP PAIN POINT                  | iDOJO SOLUTION                                    |
+|---------------------------------|---------------------------------------------------|
+| Acquisition ≠ Activation        | Onboarding Missions                               |
+| App installs don't become       | Step-by-step activation that rewards              |
+| habits                          | feature discovery                                 |
+|---------------------------------|---------------------------------------------------|
+| Salary Migration Bottleneck     | Guided Journey                                    |
+| The #1 KPI that's stuck         | Visible progress with milestone rewards           |
+|                                 | at each step                                      |
+|---------------------------------|---------------------------------------------------|
+| Weak Daily Engagement           | Daily Rewards + Streaks                           |
+| Open when needed, not daily     | Consistent reasons to return with                 |
+|                                 | escalating benefits                               |
+|---------------------------------|---------------------------------------------------|
+| Passive Feature Discovery       | Feature Discovery Missions                        |
+| Users don't find what you build | Contextual missions introduce features            |
+|                                 | at the right time                                 |
+|---------------------------------|---------------------------------------------------|
+| Promo Dependency                | Systemic Earned Rewards                           |
+| Retention is rented, not owned  | Continuous engagement without campaign costs      |
+
+"Every solution is configurable by OTP and measurable in real-time"
+
+
+================================================================================
+SLIDE 11: BANK CONTROL & SAFETY
+================================================================================
+
+YOUR PLATFORM, YOUR RULES
+
+Full administrative control with zero regulatory risk
+
+ADMIN DASHBOARD CAPABILITIES:
+
+Live Metrics:
+- Active Users: 24,521 (+12%)
+- Missions Done: 8,432 (+28%)
+- XP Distributed: 1.2M (+45%)
+
+Mission Configuration Example (Salary Migration - Active):
+- Request form: +30 XP [Edit]
+- Submit to employer: +50 XP [Edit]
+- First salary received: +200 XP [Edit]
+
+CONTROL FEATURES:
+1. Mission Configuration - Define what behaviors earn rewards
+2. Reward Management - Set XP amounts and shop costs
+3. Real-time Analytics - Track engagement as it happens
+4. User Segmentation - Target different user groups
+
+ZERO REGULATORY RISK - Built for banking compliance:
+[✓] No randomness or chance mechanics
+[✓] All rewards tied to verifiable actions
+[✓] Full audit trail of all transactions
+[✓] User-controlled participation
+[✓] Compliant with banking regulations
+[✓] GDPR-ready data handling
+
+
+================================================================================
+SLIDE 12: TECHNICAL INTEGRATION
+================================================================================
+
+SEAMLESS, SECURE, SCALABLE
+
+Enterprise-grade integration with minimal development effort
+
+ARCHITECTURE:
+
+[OTP Bank App] <--REST API--> [iDojo Platform] <--Events--> [OTP Backend]
+(iOS/Android/Web)              (Missions/Rewards)           (Kafka/Events)
+
+INTEGRATION POINTS:
+1. Event-based Architecture - Kafka integration for real-time events
+2. REST API - Full API access for all interactions
+3. Native Widget - Embeds seamlessly in your app
+4. Your Data, Your Control - Data stays in your infrastructure
+
+API EXAMPLE:
+POST /api/v1/events
+{
+  "event_type": "SALARY_RECEIVED",
+  "user_id": "usr_123456",
+  "metadata": { "amount": 2500.00 }
+}
+
+
+================================================================================
+SLIDE 13: ROI PROJECTION
+================================================================================
+
+MEASURABLE IMPACT
+
+Every metric trackable in real-time with clear ROI visibility
+
+TARGET METRICS:
+
+| Metric             | Current | Target |
+|--------------------|---------|--------|
+| Daily Active Users | 12%     | +40%   |
+| Feature Activation | 35%     | +60%   |
+| Salary Migration   | 8%      | +25%   |
+| 90-Day Retention   | 42%     | +35%   |
+
+IMPACT SUMMARY:
+- 40% Engagement Lift (Average across all metrics)
+- 60% Lower Acquisition Cost (Through organic engagement)
+- 25% Higher Customer LTV (From salary migration)
+
+"All projections based on industry benchmarks and similar implementations"
+
+
+================================================================================
+SLIDE 14: NEXT STEPS
+================================================================================
+
+LET'S BUILD THIS TOGETHER
+
+A clear path from today to transforming banking behavior
+
+IMPLEMENTATION TIMELINE:
+
+1. Week 1-2: Configuration Workshop
+   Define missions, rewards, and progression tailored to OTP's goals
+
+2. Week 2-3: Mission Design for OTP
+   Create banking-specific journeys: onboarding, card activation, salary migration
+
+3. Week 3-4: Integration & Testing
+   Connect to OTP systems, validate event flows, QA testing
+
+4. Week 5: Pilot Launch [GO LIVE]
+   Go live with selected user segment, monitor and optimize
+
+--------------------------------------------------------------------------------
+
+READY TO TRANSFORM BANKING BEHAVIOR?
+
+Schedule a discovery call to explore how iDojo can help OTP Bank achieve
+its engagement and retention goals.
+
+[iDojo] <----> [OTP Bank]
+
+Contact us at: hello@idojo.io
+
+================================================================================
+                              END OF PRESENTATION
+================================================================================

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 // Slide Components
 import TitleSlide from '@/components/slides/TitleSlide';
+import AboutUsSlide from '@/components/slides/AboutUsSlide';
 import ChallengeSlide from '@/components/slides/ChallengeSlide';
 import InsightSlide from '@/components/slides/InsightSlide';
 import SolutionSlide from '@/components/slides/SolutionSlide';
@@ -17,21 +18,24 @@ import BankControlSlide from '@/components/slides/BankControlSlide';
 import IntegrationSlide from '@/components/slides/IntegrationSlide';
 import ROISlide from '@/components/slides/ROISlide';
 import NextStepsSlide from '@/components/slides/NextStepsSlide';
+import ThankYouSlide from '@/components/slides/ThankYouSlide';
 
 const slides = [
   { id: 1, component: TitleSlide, label: 'Title' },
-  { id: 2, component: ChallengeSlide, label: 'Challenge' },
-  { id: 3, component: InsightSlide, label: 'Insight' },
-  { id: 4, component: SolutionSlide, label: 'Solution' },
-  { id: 5, component: MissionsSlide, label: 'Missions' },
-  { id: 6, component: ProgressionSlide, label: 'Progression' },
-  { id: 7, component: DailyEngagementSlide, label: 'Daily Engagement' },
-  { id: 8, component: LeaderboardsSlide, label: 'Leaderboards' },
-  { id: 9, component: SolvingChallengesSlide, label: 'Solutions Map' },
-  { id: 10, component: BankControlSlide, label: 'Bank Control' },
-  { id: 11, component: IntegrationSlide, label: 'Integration' },
-  { id: 12, component: ROISlide, label: 'ROI' },
-  { id: 13, component: NextStepsSlide, label: 'Next Steps' },
+  { id: 2, component: AboutUsSlide, label: 'About Us' },
+  { id: 3, component: ChallengeSlide, label: 'Challenge' },
+  { id: 4, component: InsightSlide, label: 'Insight' },
+  { id: 5, component: SolutionSlide, label: 'Solution' },
+  { id: 6, component: MissionsSlide, label: 'Missions' },
+  { id: 7, component: ProgressionSlide, label: 'Progression' },
+  { id: 8, component: DailyEngagementSlide, label: 'Daily Engagement' },
+  { id: 9, component: LeaderboardsSlide, label: 'Leaderboards' },
+  { id: 10, component: SolvingChallengesSlide, label: 'Solutions Map' },
+  { id: 11, component: BankControlSlide, label: 'Bank Control' },
+  { id: 12, component: IntegrationSlide, label: 'Integration' },
+  { id: 13, component: ROISlide, label: 'ROI' },
+  { id: 14, component: NextStepsSlide, label: 'Next Steps' },
+  { id: 15, component: ThankYouSlide, label: 'Thank You' },
 ];
 
 export default function Home() {
