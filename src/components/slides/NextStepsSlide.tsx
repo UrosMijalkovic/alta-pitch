@@ -15,9 +15,9 @@ const timelineSteps = [
     description: "Create banking-specific journeys: onboarding, card activation, salary migration",
   },
   {
-    week: "Week 4-5",
+    week: "Week 4-6",
     title: "Integration & Testing",
-    description: "Connect to OTP systems, validate event flows, QA testing",
+    description: "Connect to OTP systems, validate event flows, QA & stress testing",
   },
   {
     week: "Week 6",
