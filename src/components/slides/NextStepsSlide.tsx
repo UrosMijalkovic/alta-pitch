@@ -20,7 +20,7 @@ const timelineSteps = [
     description: "Connect to OTP systems, validate event flows, QA & stress testing",
   },
   {
-    week: "Week 6",
+    week: "Week 7",
     title: "Pilot Launch",
     description: "Go live with selected user segment, monitor and optimize",
   },
