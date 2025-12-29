@@ -4,9 +4,9 @@ import { motion } from 'motion/react';
 
 const journeySteps = [
   { label: 'New User', progress: 0, color: '#8A94A6' },
-  { label: 'Basic User', progress: 25, color: '#52AE30' },
-  { label: 'Engaged User', progress: 50, color: '#52AE30' },
-  { label: 'Premium Customer', progress: 75, color: '#C5A572' },
+  { label: 'Basic User', progress: 25, color: '#D20000' },
+  { label: 'Engaged User', progress: 50, color: '#D20000' },
+  { label: 'Premium Customer', progress: 75, color: '#D20000' },
   { label: 'Salary Client', progress: 100, color: '#FFD700' },
 ];
 
@@ -21,7 +21,7 @@ export default function InsightSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             The Insight
           </span>
           <h2
@@ -46,9 +46,9 @@ export default function InsightSlide() {
         >
           {/* Progress bar background */}
           <div className="relative">
-            <div className="h-1.5 md:h-2 bg-[#1A222C] rounded-full overflow-hidden">
+            <div className="h-1.5 md:h-2 bg-[#323232] rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-[#52AE30] via-[#C5A572] to-[#FFD700] rounded-full"
+                className="h-full bg-gradient-to-r from-[#D20000] via-[#FF3333] to-[#FFD700] rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ delay: 0.5, duration: 1.5, ease: 'easeOut' }}
@@ -67,7 +67,7 @@ export default function InsightSlide() {
                 >
                   {/* Dot */}
                   <motion.div
-                    className="w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#0A0F14] -mt-6 md:-mt-12 mb-2 md:mb-4 relative z-10"
+                    className="w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#1A1A1A] -mt-6 md:-mt-12 mb-2 md:mb-4 relative z-10"
                     style={{ backgroundColor: step.color }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -96,7 +96,7 @@ export default function InsightSlide() {
                   {/* Progress indicator - hidden on mobile */}
                   {index > 0 && (
                     <div className="hidden md:flex mt-2 items-center gap-1">
-                      <svg className="w-3 h-3 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-3 h-3 text-[#D20000]" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <span className="text-xs text-[#8A94A6]">+%</span>
@@ -116,7 +116,7 @@ export default function InsightSlide() {
           transition={{ delay: 0.9, duration: 0.6 }}
         >
           {/* Background glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 md:w-64 h-32 md:h-64 bg-[#52AE30]/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 md:w-64 h-32 md:h-64 bg-[#D20000]/10 rounded-full blur-3xl" />
 
           <div className="relative z-10">
             <motion.div
@@ -137,9 +137,9 @@ export default function InsightSlide() {
 
           {/* Decorative elements - hidden on mobile */}
           <div className="hidden md:flex absolute top-4 right-4 gap-1">
-            <div className="w-2 h-2 rounded-full bg-[#52AE30]" />
-            <div className="w-2 h-2 rounded-full bg-[#52AE30]/50" />
-            <div className="w-2 h-2 rounded-full bg-[#52AE30]/25" />
+            <div className="w-2 h-2 rounded-full bg-[#D20000]" />
+            <div className="w-2 h-2 rounded-full bg-[#D20000]/50" />
+            <div className="w-2 h-2 rounded-full bg-[#D20000]/25" />
           </div>
         </motion.div>
 
@@ -151,7 +151,7 @@ export default function InsightSlide() {
           transition={{ delay: 1.2, duration: 0.5 }}
         >
           <p className="text-sm md:text-lg text-[#8A94A6] italic">
-            &ldquo;You&apos;re <span className="text-[#52AE30]">80%</span> to unlocking Premium benefits&rdquo;
+            &ldquo;You&apos;re <span className="text-[#D20000]">80%</span> to unlocking Premium benefits&rdquo;
             <br />
             <span className="text-xs md:text-sm not-italic">— The psychology that drives action</span>
           </p>

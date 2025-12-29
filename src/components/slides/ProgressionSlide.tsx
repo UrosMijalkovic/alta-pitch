@@ -4,10 +4,10 @@ import { motion } from 'motion/react';
 
 const levels = [
   { name: 'Starter', xp: 0, color: '#8A94A6', benefits: ['Basic rewards', 'Standard missions'] },
-  { name: 'Active', xp: 500, color: '#52AE30', benefits: ['5% bonus XP', 'Daily challenges'] },
+  { name: 'Active', xp: 500, color: '#D20000', benefits: ['5% bonus XP', 'Daily challenges'] },
   { name: 'Engaged', xp: 1500, color: '#3498DB', benefits: ['10% bonus XP', 'Premium missions', 'Priority support'] },
   { name: 'Premium', xp: 3500, color: '#9B59B6', benefits: ['15% bonus XP', 'Exclusive rewards', 'Early access'] },
-  { name: 'Elite', xp: 7500, color: '#C5A572', benefits: ['20% bonus XP', 'VIP status', 'All benefits'] },
+  { name: 'Elite', xp: 7500, color: '#D20000', benefits: ['20% bonus XP', 'VIP status', 'All benefits'] },
 ];
 
 const currentLevel = 2;
@@ -27,7 +27,7 @@ export default function ProgressionSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             Progression System
           </span>
           <h2
@@ -50,7 +50,7 @@ export default function ProgressionSlide() {
         >
           <div className="relative">
             {/* Progress track */}
-            <div className="h-2 md:h-3 bg-[#1A222C] rounded-full overflow-hidden">
+            <div className="h-2 md:h-3 bg-[#323232] rounded-full overflow-hidden">
               <motion.div
                 className="h-full rounded-full"
                 style={{
@@ -74,7 +74,7 @@ export default function ProgressionSlide() {
                 >
                   {/* Level indicator */}
                   <div
-                    className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center -mt-6 md:-mt-9 relative z-10 border-2 md:border-4 border-[#0A0F14] ${
+                    className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center -mt-6 md:-mt-9 relative z-10 border-2 md:border-4 border-[#1A1A1A] ${
                       index <= currentLevel ? '' : 'opacity-50'
                     }`}
                     style={{ backgroundColor: level.color }}
@@ -148,7 +148,7 @@ export default function ProgressionSlide() {
                   <span className="text-white font-medium">{currentXP.toLocaleString()} XP</span>
                   <span className="text-[#8A94A6]">{nextLevelXP.toLocaleString()} XP</span>
                 </div>
-                <div className="h-2 md:h-3 bg-[#1A222C] rounded-full overflow-hidden">
+                <div className="h-2 md:h-3 bg-[#323232] rounded-full overflow-hidden">
                   <motion.div
                     className="h-full rounded-full"
                     style={{ backgroundColor: levels[currentLevel].color }}
@@ -160,12 +160,12 @@ export default function ProgressionSlide() {
               </div>
 
               {/* Near-miss message */}
-              <div className="flex items-center gap-2 bg-[#52AE30]/10 rounded-lg p-2 md:p-3">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center gap-2 bg-[#D20000]/10 rounded-lg p-2 md:p-3">
+                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#D20000]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                 </svg>
                 <p className="text-xs md:text-sm text-white">
-                  You&apos;re <span className="text-[#52AE30] font-bold">{Math.round(progressPercent)}%</span> to unlocking Premium benefits!
+                  You&apos;re <span className="text-[#D20000] font-bold">{Math.round(progressPercent)}%</span> to unlocking Premium benefits!
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function ProgressionSlide() {
               {levels[currentLevel + 1].benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit}
-                  className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-[#1A222C] rounded-lg"
+                  className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-[#323232] rounded-lg"
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1 + index * 0.1, duration: 0.4 }}

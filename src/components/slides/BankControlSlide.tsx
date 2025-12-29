@@ -54,7 +54,7 @@ export default function BankControlSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             Bank Control
           </span>
           <h2
@@ -77,13 +77,13 @@ export default function BankControlSlide() {
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             {/* Dashboard header */}
-            <div className="bg-[#1A222C] p-2 md:p-4 border-b border-white/5 flex items-center gap-2 md:gap-3">
+            <div className="bg-[#323232] p-2 md:p-4 border-b border-white/5 flex items-center gap-2 md:gap-3">
               <div className="flex gap-1 md:gap-1.5">
                 <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#FF6B6B]" />
                 <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#FFB84D]" />
-                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#52AE30]" />
+                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#D20000]" />
               </div>
-              <span className="text-xs md:text-sm text-[#8A94A6]">Admin Dashboard — OTP Bank</span>
+              <span className="text-xs md:text-sm text-[#8A94A6]">Admin Dashboard — Alta banka</span>
             </div>
 
             {/* Dashboard content */}
@@ -97,14 +97,14 @@ export default function BankControlSlide() {
                 ].map((stat, index) => (
                   <motion.div
                     key={stat.label}
-                    className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4"
+                    className="bg-[#323232] rounded-lg md:rounded-xl p-2 md:p-4"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
                   >
                     <p className="text-[8px] md:text-xs text-[#8A94A6] mb-0.5 md:mb-1">{stat.label}</p>
                     <p className="text-sm md:text-xl font-bold text-white">{stat.value}</p>
-                    <span className="text-[8px] md:text-xs text-[#52AE30]">{stat.change}</span>
+                    <span className="text-[8px] md:text-xs text-[#D20000]">{stat.change}</span>
                   </motion.div>
                 ))}
               </div>
@@ -112,13 +112,13 @@ export default function BankControlSlide() {
               {/* Analytics section */}
               <div className="grid grid-cols-2 gap-2 md:gap-3">
                 {/* Engagement Chart */}
-                <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3">
+                <div className="bg-[#262626] rounded-lg md:rounded-xl p-2 md:p-3">
                   <p className="text-[8px] md:text-xs text-[#8A94A6] mb-2">Weekly Engagement</p>
                   <div className="flex items-end gap-1 h-12 md:h-16">
                     {[35, 45, 38, 52, 48, 65, 72].map((height, i) => (
                       <motion.div
                         key={i}
-                        className="flex-1 bg-[#52AE30] rounded-t"
+                        className="flex-1 bg-[#D20000] rounded-t"
                         initial={{ height: 0 }}
                         animate={{ height: `${height}%` }}
                         transition={{ delay: 0.6 + i * 0.05, duration: 0.4 }}
@@ -132,13 +132,13 @@ export default function BankControlSlide() {
                 </div>
 
                 {/* Conversion Funnel */}
-                <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3">
+                <div className="bg-[#262626] rounded-lg md:rounded-xl p-2 md:p-3">
                   <p className="text-[8px] md:text-xs text-[#8A94A6] mb-2">Salary Migration Funnel</p>
                   <div className="space-y-1">
                     {[
-                      { label: 'Started', value: 100, color: '#52AE30' },
-                      { label: 'Form Sent', value: 72, color: '#7BC962' },
-                      { label: 'Completed', value: 48, color: '#C5A572' },
+                      { label: 'Started', value: 100, color: '#D20000' },
+                      { label: 'Form Sent', value: 72, color: '#FF3333' },
+                      { label: 'Completed', value: 48, color: '#D20000' },
                     ].map((step, i) => (
                       <motion.div
                         key={step.label}
@@ -165,11 +165,11 @@ export default function BankControlSlide() {
               </div>
 
               {/* Line chart area */}
-              <div className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-3 mt-2 md:mt-3">
+              <div className="bg-[#262626] rounded-lg md:rounded-xl p-2 md:p-3 mt-2 md:mt-3">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-[8px] md:text-xs text-[#8A94A6]">Mission Completion Trend</p>
                   <div className="flex gap-2 text-[6px] md:text-[8px]">
-                    <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-[#52AE30]" />This Week</span>
+                    <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-[#D20000]" />This Week</span>
                     <span className="flex items-center gap-1 text-[#8A94A6]"><span className="w-1.5 h-1.5 rounded-full bg-[#3498DB]" />Last Week</span>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function BankControlSlide() {
                   <motion.path
                     d="M0,38 Q25,30 50,28 T100,20 T150,15 T200,8"
                     fill="none"
-                    stroke="#52AE30"
+                    stroke="#D20000"
                     strokeWidth="2"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
@@ -199,7 +199,7 @@ export default function BankControlSlide() {
                   <motion.path
                     d="M0,38 Q25,30 50,28 T100,20 T150,15 T200,8"
                     fill="none"
-                    stroke="#52AE30"
+                    stroke="#D20000"
                     strokeWidth="4"
                     strokeOpacity="0.3"
                     initial={{ pathLength: 0 }}
@@ -223,12 +223,12 @@ export default function BankControlSlide() {
               {controlFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  className="glass rounded-lg md:rounded-xl p-2 md:p-4 hover:border-[#52AE30]/50 transition-all"
+                  className="glass rounded-lg md:rounded-xl p-2 md:p-4 hover:border-[#D20000]/50 transition-all"
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
                 >
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#52AE30]/20 text-[#52AE30] flex items-center justify-center mb-2 md:mb-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#D20000]/20 text-[#D20000] flex items-center justify-center mb-2 md:mb-3">
                     {feature.icon}
                   </div>
                   <h4 className="text-white font-medium text-xs md:text-sm">{feature.title}</h4>
@@ -245,14 +245,14 @@ export default function BankControlSlide() {
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-[#52AE30] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-[#D20000] flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 md:w-7 md:h-7 text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[#52AE30] text-base md:text-xl">✓</span>
+                    <span className="text-[#D20000] text-base md:text-xl">✓</span>
                     <h3 className="text-sm md:text-lg font-semibold text-white">GDPR-aligned by design</h3>
                   </div>
                   <p className="text-xs md:text-base text-[#8A94A6]">

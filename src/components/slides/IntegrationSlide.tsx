@@ -53,7 +53,7 @@ export default function IntegrationSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             Technical Integration
           </span>
           <h2
@@ -77,15 +77,15 @@ export default function IntegrationSlide() {
           <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-2 md:gap-4 min-w-[320px]">
             {/* OTP App */}
             <motion.div
-              className="w-20 sm:w-24 md:w-40 h-16 sm:h-20 md:h-36 rounded-lg md:rounded-xl bg-[#52AE30]/10 border-2 border-[#52AE30]/30 flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-3 flex-shrink-0"
+              className="w-20 sm:w-24 md:w-40 h-16 sm:h-20 md:h-36 rounded-lg md:rounded-xl bg-[#D20000]/10 border-2 border-[#D20000]/30 flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-3 flex-shrink-0"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-16 md:h-16 rounded-md md:rounded-xl bg-white flex items-center justify-center mb-0.5 sm:mb-1 md:mb-3 overflow-hidden">
-                <Image src="/otp-logo.png" alt="OTP Bank" width={56} height={56} className="w-5 h-5 sm:w-6 sm:h-6 md:w-14 md:h-14 object-contain" />
+                <Image src="/altalogo.webp" alt="Alta banka" width={56} height={56} className="w-5 h-5 sm:w-6 sm:h-6 md:w-14 md:h-14 object-contain" />
               </div>
-              <p className="text-white font-semibold text-center text-[9px] sm:text-[10px] md:text-base leading-tight">OTP App</p>
+              <p className="text-white font-semibold text-center text-[9px] sm:text-[10px] md:text-base leading-tight">Alta banka App</p>
               <p className="text-[7px] sm:text-[8px] md:text-xs text-[#8A94A6] text-center mt-0.5 hidden sm:block">Auth + UUID</p>
             </motion.div>
 
@@ -97,34 +97,34 @@ export default function IntegrationSlide() {
               transition={{ delay: 0.7, duration: 0.4 }}
             >
               <div className="flex items-center gap-0.5 md:gap-2">
-                <div className="w-3 sm:w-4 md:w-8 h-0.5 bg-[#52AE30]" />
-                <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-4 md:h-4 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-3 sm:w-4 md:w-8 h-0.5 bg-[#D20000]" />
+                <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-4 md:h-4 text-[#D20000]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>
-              <span className="text-[7px] sm:text-[8px] md:text-xs text-[#52AE30] font-medium">iFrame</span>
+              <span className="text-[7px] sm:text-[8px] md:text-xs text-[#D20000] font-medium">iFrame</span>
               <div className="flex items-center gap-0.5 md:gap-2">
-                <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-4 md:h-4 text-[#52AE30] rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-4 md:h-4 text-[#D20000] rotate-180" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                <div className="w-3 sm:w-4 md:w-8 h-0.5 bg-[#52AE30]" />
+                <div className="w-3 sm:w-4 md:w-8 h-0.5 bg-[#D20000]" />
               </div>
             </motion.div>
 
             {/* iDojo Platform - Central */}
             <motion.div
-              className="w-24 sm:w-28 md:w-56 h-18 sm:h-24 md:h-40 rounded-lg md:rounded-xl bg-gradient-to-br from-[#1A222C] to-[#0A0F14] border-2 border-[#52AE30] flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-3 green-glow flex-shrink-0"
+              className="w-24 sm:w-28 md:w-56 h-18 sm:h-24 md:h-40 rounded-lg md:rounded-xl bg-gradient-to-br from-[#323232] to-[#1A1A1A] border-2 border-[#D20000] flex flex-col items-center justify-center p-1.5 sm:p-2 md:p-3 green-glow flex-shrink-0"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-14 md:h-14 rounded-md md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center mb-0.5 sm:mb-1 md:mb-2 overflow-hidden relative">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-14 md:h-14 rounded-md md:rounded-xl bg-gradient-to-br from-[#D20000] to-[#262626] flex items-center justify-center mb-0.5 sm:mb-1 md:mb-2 overflow-hidden relative">
                 <Image src="/idojo-logo.png" alt="iDojo" width={56} height={56} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#52AE30]/30 to-[#006837]/30 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D20000]/30 to-[#262626]/30 mix-blend-overlay" />
               </div>
               <p className="text-white font-semibold text-center text-[9px] sm:text-[10px] md:text-base mb-0.5 leading-tight">iDojo</p>
               <div className="hidden sm:flex flex-wrap justify-center gap-0.5 md:gap-1.5">
-                <span className="text-[6px] md:text-[10px] px-1 py-0.5 rounded bg-[#52AE30]/20 text-[#52AE30]">Widget</span>
+                <span className="text-[6px] md:text-[10px] px-1 py-0.5 rounded bg-[#D20000]/20 text-[#D20000]">Widget</span>
                 <span className="text-[6px] md:text-[10px] px-1 py-0.5 rounded bg-[#3498DB]/20 text-[#3498DB]">Admin</span>
                 <span className="text-[6px] md:text-[10px] px-1 py-0.5 rounded bg-[#9B59B6]/20 text-[#9B59B6]">Socket</span>
               </div>
@@ -159,7 +159,7 @@ export default function IntegrationSlide() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-16 md:h-16 rounded-md md:rounded-xl bg-[#1A222C] border-2 border-[#FFB84D]/50 flex items-center justify-center mb-0.5 sm:mb-1 md:mb-3">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-16 md:h-16 rounded-md md:rounded-xl bg-[#323232] border-2 border-[#FFB84D]/50 flex items-center justify-center mb-0.5 sm:mb-1 md:mb-3">
                 <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-8 md:h-8 text-[#FFB84D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                 </svg>
@@ -175,12 +175,12 @@ export default function IntegrationSlide() {
           {integrationPoints.map((point, index) => (
             <motion.div
               key={point.label}
-              className="glass rounded-lg md:rounded-xl p-2 md:p-5 text-center hover:border-[#52AE30]/50 transition-all"
+              className="glass rounded-lg md:rounded-xl p-2 md:p-5 text-center hover:border-[#D20000]/50 transition-all"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 + index * 0.1, duration: 0.4 }}
             >
-              <div className="w-8 h-8 md:w-12 md:h-12 mx-auto rounded-lg md:rounded-xl bg-[#52AE30]/20 flex items-center justify-center mb-2 md:mb-3 text-[#52AE30]">
+              <div className="w-8 h-8 md:w-12 md:h-12 mx-auto rounded-lg md:rounded-xl bg-[#D20000]/20 flex items-center justify-center mb-2 md:mb-3 text-[#D20000]">
                 {point.icon}
               </div>
               <h4 className="text-white font-semibold mb-0.5 md:mb-1 text-xs md:text-base">{point.label}</h4>
@@ -198,21 +198,21 @@ export default function IntegrationSlide() {
         >
           <div className="glass rounded-xl p-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">1</div>
-              <h4 className="text-white font-medium text-sm">OTP Authenticates</h4>
+              <div className="w-6 h-6 rounded-full bg-[#D20000] flex items-center justify-center text-[#1A1A1A] text-xs font-bold">1</div>
+              <h4 className="text-white font-medium text-sm">Alta banka Authenticates</h4>
             </div>
-            <p className="text-xs text-[#8A94A6]">User logs in, OTP sends UUID + client name to our server</p>
+            <p className="text-xs text-[#8A94A6]">User logs in, Alta banka sends UUID + client name to our server</p>
           </div>
           <div className="glass rounded-xl p-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">2</div>
+              <div className="w-6 h-6 rounded-full bg-[#D20000] flex items-center justify-center text-[#1A1A1A] text-xs font-bold">2</div>
               <h4 className="text-white font-medium text-sm">We Load Widget</h4>
             </div>
             <p className="text-xs text-[#8A94A6]">Fetch user data, package in widget, return iFrame to your app</p>
           </div>
           <div className="glass rounded-xl p-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-6 h-6 rounded-full bg-[#52AE30] flex items-center justify-center text-white text-xs font-bold">3</div>
+              <div className="w-6 h-6 rounded-full bg-[#D20000] flex items-center justify-center text-[#1A1A1A] text-xs font-bold">3</div>
               <h4 className="text-white font-medium text-sm">Everything In Widget</h4>
             </div>
             <p className="text-xs text-[#8A94A6]">Rewards, shop, missions — all interactions happen inside our widget</p>

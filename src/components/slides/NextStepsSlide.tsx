@@ -7,17 +7,17 @@ const timelineSteps = [
   {
     week: "Week 1-2",
     title: "Configuration Workshop",
-    description: "Define missions, rewards, and progression tailored to OTP's goals",
+    description: "Define missions, rewards, and progression tailored to Alta banka's goals",
   },
   {
     week: "Week 2-4",
-    title: "Mission Design for OTP",
+    title: "Mission Design for Alta banka",
     description: "Create banking-specific journeys: onboarding, card activation, salary migration",
   },
   {
     week: "Week 4-6",
     title: "Integration & Testing",
-    description: "Connect to OTP systems, validate event flows, QA & stress testing",
+    description: "Connect to Alta banka systems, validate event flows, QA & stress testing",
   },
   {
     week: "Week 7",
@@ -37,7 +37,7 @@ export default function NextStepsSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-2 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-2 block">
             Next Steps
           </span>
           <h2
@@ -69,21 +69,21 @@ export default function NextStepsSlide() {
               >
                 {/* Connector line - hidden on mobile */}
                 {index < timelineSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-3 md:top-4 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#52AE30] to-[#52AE30]/30" />
+                  <div className="hidden md:block absolute top-3 md:top-4 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#D20000] to-[#D20000]/30" />
                 )}
 
                 <div className="flex md:flex-col items-start md:items-center gap-2 md:gap-0 md:text-center">
                   {/* Step number */}
                   <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                     index === timelineSteps.length - 1
-                      ? 'bg-[#52AE30] text-white'
-                      : 'bg-[#52AE30]/20 text-[#52AE30]'
+                      ? 'bg-[#D20000] text-[#1A1A1A]'
+                      : 'bg-[#D20000]/20 text-[#D20000]'
                   }`}>
                     <span className="text-xs md:text-sm font-bold">{index + 1}</span>
                   </div>
 
                   <div className="flex-1 md:mt-2">
-                    <span className="text-[#52AE30] font-medium text-[10px] md:text-xs">{step.week}</span>
+                    <span className="text-[#D20000] font-medium text-[10px] md:text-xs">{step.week}</span>
                     <h3 className="text-xs md:text-sm font-semibold text-white mt-0.5">{step.title}</h3>
                     <p className="text-[8px] md:text-xs text-[#8A94A6] mt-0.5 leading-tight">{step.description}</p>
                   </div>
@@ -102,7 +102,7 @@ export default function NextStepsSlide() {
         >
           <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 relative overflow-hidden">
             {/* Background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 h-48 md:h-64 bg-[#52AE30]/10 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 h-48 md:h-64 bg-[#D20000]/10 rounded-full blur-3xl" />
 
             <div className="relative z-10">
               <motion.h3
@@ -124,15 +124,15 @@ export default function NextStepsSlide() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 1, duration: 0.4 }}
                 >
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center green-glow overflow-hidden relative">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-[#D20000] to-[#262626] flex items-center justify-center green-glow overflow-hidden relative">
                     <Image src="/idojo-logo.png" alt="iDojo" width={48} height={48} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#52AE30]/30 to-[#006837]/30 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#D20000]/30 to-[#262626]/30 mix-blend-overlay" />
                   </div>
                   <span className="mt-0.5 md:mt-1 text-[8px] md:text-xs text-[#8A94A6]">iDojo</span>
                 </motion.div>
 
                 <motion.div
-                  className="text-[#52AE30]"
+                  className="text-[#D20000]"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1.1, duration: 0.3 }}
@@ -149,9 +149,9 @@ export default function NextStepsSlide() {
                   transition={{ delay: 1, duration: 0.4 }}
                 >
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-white flex items-center justify-center overflow-hidden">
-                    <Image src="/otp-logo.png" alt="OTP Bank" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+                    <Image src="/altalogo.webp" alt="Alta banka" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
                   </div>
-                  <span className="mt-0.5 md:mt-1 text-[8px] md:text-xs text-[#8A94A6]">OTP Bank</span>
+                  <span className="mt-0.5 md:mt-1 text-[8px] md:text-xs text-[#8A94A6]">Alta banka Bank</span>
                 </motion.div>
               </div>
 
@@ -162,10 +162,10 @@ export default function NextStepsSlide() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.4 }}
               >
-                <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#52AE30] animate-pulse" />
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D20000] animate-pulse" />
                 <span className="text-xs md:text-sm text-[#8A94A6]">
                   Contact us at{' '}
-                  <span className="text-[#52AE30] font-medium">mijalkovic@miracledojo.com</span>
+                  <span className="text-[#D20000] font-medium">mijalkovic@miracledojo.com</span>
                 </span>
               </motion.div>
             </div>

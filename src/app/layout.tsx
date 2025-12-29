@@ -15,8 +15,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "iDojo × OTP Bank | Transforming Banking Behavior",
-  description: "A Native Engagement Engine for OTP Bank - Transforming banking habits through behavioral engagement",
+  title: "iDojo × Alta banka | Transforming Banking Behavior",
+  description: "A Native Engagement Engine for Alta banka - Transforming banking habits through behavioral engagement",
 };
 
 export default function RootLayout({

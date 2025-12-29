@@ -8,25 +8,25 @@ export default function TitleSlide() {
     <div className="h-full w-full flex items-center justify-center relative overflow-hidden px-4 md:px-8">
       {/* Decorative elements - hidden on mobile */}
       <motion.div
-        className="hidden md:block absolute top-20 left-20 w-32 h-32 border border-[#52AE30]/20 rounded-full"
+        className="hidden md:block absolute top-20 left-20 w-32 h-32 border border-[#D20000]/20 rounded-full"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       />
       <motion.div
-        className="hidden md:block absolute bottom-32 right-32 w-48 h-48 border border-[#52AE30]/10 rounded-full"
+        className="hidden md:block absolute bottom-32 right-32 w-48 h-48 border border-[#D20000]/10 rounded-full"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.8 }}
       />
       <motion.div
-        className="hidden md:block absolute top-1/3 right-1/4 w-2 h-2 bg-[#52AE30] rounded-full"
+        className="hidden md:block absolute top-1/3 right-1/4 w-2 h-2 bg-[#D20000] rounded-full"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, duration: 0.3 }}
       />
       <motion.div
-        className="hidden md:block absolute bottom-1/3 left-1/4 w-3 h-3 bg-[#52AE30]/50 rounded-full"
+        className="hidden md:block absolute bottom-1/3 left-1/4 w-3 h-3 bg-[#D20000]/50 rounded-full"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1.1, duration: 0.3 }}
@@ -42,8 +42,8 @@ export default function TitleSlide() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="text-xs md:text-sm font-medium text-[#8A94A6]">iDojo</span>
-          <span className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-[#52AE30]" />
-          <span className="text-xs md:text-sm font-medium text-[#52AE30]">OTP Bank</span>
+          <span className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-[#D20000]" />
+          <span className="text-xs md:text-sm font-medium text-[#D20000]">Alta banka</span>
         </motion.div>
 
         {/* Main title */}
@@ -66,7 +66,7 @@ export default function TitleSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          A Native Engagement Engine for OTP Bank
+          A Native Engagement Engine for Alta banka
         </motion.p>
 
         {/* Visual representation */}
@@ -78,9 +78,9 @@ export default function TitleSlide() {
         >
           {/* iDojo logo */}
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#52AE30] to-[#006837] flex items-center justify-center green-glow overflow-hidden relative">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#D20000] to-[#262626] flex items-center justify-center green-glow overflow-hidden relative">
               <Image src="/idojo-logo.png" alt="iDojo" width={64} height={64} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#52AE30]/30 to-[#006837]/30 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#D20000]/30 to-[#262626]/30 mix-blend-overlay" />
             </div>
             <span className="mt-2 md:mt-3 text-xs md:text-sm text-[#8A94A6]">iDojo</span>
           </div>
@@ -88,19 +88,19 @@ export default function TitleSlide() {
           {/* Connection line */}
           <div className="flex items-center gap-1 md:gap-2">
             <motion.div
-              className="w-6 md:w-12 h-0.5 bg-gradient-to-r from-[#52AE30] to-transparent"
+              className="w-6 md:w-12 h-0.5 bg-gradient-to-r from-[#D20000] to-transparent"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             />
             <motion.div
-              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#52AE30] animate-pulse-green"
+              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#D20000] animate-pulse-green"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.2, duration: 0.3 }}
             />
             <motion.div
-              className="w-6 md:w-12 h-0.5 bg-gradient-to-l from-[#52AE30] to-transparent"
+              className="w-6 md:w-12 h-0.5 bg-gradient-to-l from-[#D20000] to-transparent"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -110,9 +110,9 @@ export default function TitleSlide() {
           {/* OTP logo */}
           <div className="flex flex-col items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-white flex items-center justify-center overflow-hidden">
-              <Image src="/otp-logo.png" alt="OTP Bank" width={56} height={56} className="w-10 h-10 md:w-14 md:h-14 object-contain" />
+              <Image src="/altalogo.webp" alt="Alta banka" width={56} height={56} className="w-10 h-10 md:w-14 md:h-14 object-contain" />
             </div>
-            <span className="mt-2 md:mt-3 text-xs md:text-sm text-[#8A94A6]">OTP Bank</span>
+            <span className="mt-2 md:mt-3 text-xs md:text-sm text-[#8A94A6]">Alta banka</span>
           </div>
         </motion.div>
 
@@ -128,7 +128,7 @@ export default function TitleSlide() {
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           >
-            <svg className="w-5 h-5 text-[#52AE30]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-[#D20000]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </motion.div>

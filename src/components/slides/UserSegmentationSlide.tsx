@@ -6,7 +6,7 @@ const segments = [
   {
     name: "Students",
     icon: "🎓",
-    color: "#52AE30",
+    color: "#D20000",
     highlight: true,
     journey: [
       { step: "Open first account", xp: 50 },
@@ -53,7 +53,7 @@ export default function UserSegmentationSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-[10px] md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-4 block">
+          <span className="text-[#D20000] text-[10px] md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-4 block">
             User Segmentation
           </span>
           <h2
@@ -73,7 +73,7 @@ export default function UserSegmentationSlide() {
             <motion.div
               key={segment.name}
               className={`glass rounded-md md:rounded-xl p-2 md:p-4 relative overflow-hidden ${
-                segment.highlight ? 'border-[#52AE30]/50 ring-1 ring-[#52AE30]/30' : ''
+                segment.highlight ? 'border-[#D20000]/50 ring-1 ring-[#D20000]/30' : ''
               }`}
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -81,14 +81,14 @@ export default function UserSegmentationSlide() {
             >
               {/* Highlight badge */}
               {segment.highlight && (
-                <div className="absolute top-1 right-1 md:top-2 md:right-2 px-1 md:px-1.5 py-0.5 rounded text-[6px] md:text-[10px] bg-[#52AE30] text-white font-medium">
+                <div className="absolute top-1 right-1 md:top-2 md:right-2 px-1 md:px-1.5 py-0.5 rounded text-[6px] md:text-[10px] bg-[#D20000] text-[#1A1A1A] font-medium">
                   Key Focus
                 </div>
               )}
 
               {/* Background glow for highlighted */}
               {segment.highlight && (
-                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-[#52AE30]/10 rounded-full blur-2xl" />
+                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-[#D20000]/10 rounded-full blur-2xl" />
               )}
 
               <div className="relative z-10">
@@ -160,7 +160,7 @@ export default function UserSegmentationSlide() {
         >
           <div className="flex flex-row items-center gap-2 md:gap-6">
             <div className="flex items-center gap-1.5 md:gap-3 flex-shrink-0">
-              <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-[#52AE30]/20 flex items-center justify-center">
+              <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-[#D20000]/20 flex items-center justify-center">
                 <span className="text-lg md:text-3xl">🎓</span>
               </div>
               <div>
@@ -172,7 +172,7 @@ export default function UserSegmentationSlide() {
             <div className="flex-1 grid grid-cols-3 gap-1 md:gap-4">
               <div className="text-center">
                 <motion.p
-                  className="text-sm md:text-2xl font-bold text-[#52AE30]"
+                  className="text-sm md:text-2xl font-bold text-[#D20000]"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1, duration: 0.3 }}
@@ -194,7 +194,7 @@ export default function UserSegmentationSlide() {
               </div>
               <div className="text-center">
                 <motion.p
-                  className="text-sm md:text-2xl font-bold text-[#C5A572]"
+                  className="text-sm md:text-2xl font-bold text-[#D20000]"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 1.2, duration: 0.3 }}

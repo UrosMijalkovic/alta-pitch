@@ -51,7 +51,7 @@ export default function SolutionSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             The Solution
           </span>
           <h2
@@ -61,7 +61,7 @@ export default function SolutionSlide() {
             A Native <span className="gradient-text">Behavioral Engine</span>
           </h2>
           <p className="text-sm md:text-lg text-[#8A94A6] mb-4 md:mb-6">
-            Embedded seamlessly into OTP&apos;s app experience, driving engagement through proven behavioral mechanics.
+            Embedded seamlessly into Alta banka&apos;s app experience, driving engagement through proven behavioral mechanics.
           </p>
         </motion.div>
 
@@ -70,12 +70,12 @@ export default function SolutionSlide() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="glass rounded-lg p-2 md:p-4 group hover:border-[#52AE30]/50 transition-all duration-300"
+              className="glass rounded-lg p-2 md:p-4 group hover:border-[#D20000]/50 transition-all duration-300"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
             >
-              <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg bg-[#52AE30]/20 text-[#52AE30] flex items-center justify-center mb-2 md:mb-3 group-hover:bg-[#52AE30]/30 transition-colors">
+              <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg bg-[#D20000]/20 text-[#D20000] flex items-center justify-center mb-2 md:mb-3 group-hover:bg-[#D20000]/30 transition-colors">
                 {feature.icon}
               </div>
               <h3 className="text-white font-semibold text-xs md:text-base mb-0.5 md:mb-1">{feature.title}</h3>
@@ -104,7 +104,7 @@ export default function SolutionSlide() {
                   <p className="text-[8px] md:text-xs text-[#8A94A6]">Good morning,</p>
                   <p className="text-sm md:text-lg font-semibold text-white">Marko</p>
                 </div>
-                <div className="w-6 h-6 md:w-10 md:h-10 rounded-full bg-[#52AE30] flex items-center justify-center">
+                <div className="w-6 h-6 md:w-10 md:h-10 rounded-full bg-[#D20000] flex items-center justify-center">
                   <span className="text-white font-bold text-[10px] md:text-sm">M</span>
                 </div>
               </div>
@@ -114,10 +114,10 @@ export default function SolutionSlide() {
                 <p className="text-[8px] md:text-xs text-[#8A94A6] mb-0.5 md:mb-1">Total Balance</p>
                 <p className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">€12,450</p>
                 <div className="flex gap-1 md:gap-2">
-                  <div className="flex-1 bg-[#52AE30] rounded-md md:rounded-lg p-1 md:p-2 text-center">
-                    <span className="text-white text-[8px] md:text-xs font-medium">Send</span>
+                  <div className="flex-1 bg-[#D20000] rounded-md md:rounded-lg p-1 md:p-2 text-center">
+                    <span className="text-[#1A1A1A] text-[8px] md:text-xs font-medium">Send</span>
                   </div>
-                  <div className="flex-1 bg-[#1A222C] rounded-md md:rounded-lg p-1 md:p-2 text-center">
+                  <div className="flex-1 bg-[#323232] rounded-md md:rounded-lg p-1 md:p-2 text-center">
                     <span className="text-white text-[8px] md:text-xs font-medium">Top up</span>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function SolutionSlide() {
               {/* Engagement widget */}
               <motion.div
                 className="rounded-xl md:rounded-2xl p-2 md:p-4 relative overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #52AE30 0%, #006837 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #D20000 0%, #262626 100%)' }}
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
@@ -165,7 +165,7 @@ export default function SolutionSlide() {
                     <p className="text-white text-[10px] md:text-sm font-medium truncate">Savings Champion</p>
                     <p className="text-[#8A94A6] text-[8px] md:text-xs">2 of 5 steps</p>
                   </div>
-                  <span className="text-[#52AE30] text-[10px] md:text-sm font-bold">+150</span>
+                  <span className="text-[#D20000] text-[10px] md:text-sm font-bold">+150</span>
                 </div>
               </motion.div>
             </div>

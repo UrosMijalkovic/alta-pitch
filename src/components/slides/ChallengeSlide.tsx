@@ -37,7 +37,7 @@ const painPoints = [
     description: "Open when needed, not daily",
     stat: "Low",
     statLabel: "DAU vs MAU ratio*",
-    color: "#52AE30",
+    color: "#D20000",
   },
   {
     icon: (
@@ -75,7 +75,7 @@ export default function ChallengeSlide() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+        <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
           The Challenge
         </span>
         <h2
@@ -93,7 +93,7 @@ export default function ChallengeSlide() {
         {painPoints.map((point, index) => (
           <motion.div
             key={point.title}
-            className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#52AE30]/50 transition-all duration-300 flex flex-col"
+            className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#D20000]/50 transition-all duration-300 flex flex-col"
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
@@ -149,8 +149,8 @@ export default function ChallengeSlide() {
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <p className="text-sm md:text-lg text-[#8A94A6] max-w-3xl mx-auto">
-          OTP&apos;s pain is not acquisition—it&apos;s turning users into{' '}
-          <span className="text-[#52AE30] font-medium">habitual, high-value customers</span>.
+          Alta banka&apos;s pain is not acquisition—it&apos;s turning users into{' '}
+          <span className="text-[#D20000] font-medium">habitual, high-value customers</span>.
         </p>
       </motion.div>
 

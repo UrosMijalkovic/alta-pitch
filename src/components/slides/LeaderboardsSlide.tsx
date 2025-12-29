@@ -58,7 +58,7 @@ export default function LeaderboardsSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             Community & Rewards
           </span>
           <h2
@@ -88,7 +88,7 @@ export default function LeaderboardsSlide() {
                 </div>
                 <div className="flex items-center gap-1 md:gap-2">
                   <span className="text-[10px] md:text-xs text-[#8A94A6]">Resets in</span>
-                  <span className="text-xs md:text-sm font-medium text-[#52AE30]">3d 14h</span>
+                  <span className="text-xs md:text-sm font-medium text-[#D20000]">3d 14h</span>
                 </div>
               </div>
             </div>
@@ -101,8 +101,8 @@ export default function LeaderboardsSlide() {
                     layout
                     className={`flex items-center gap-2 md:gap-4 p-2 md:p-3 rounded-lg md:rounded-xl mb-1.5 md:mb-2 ${
                       user.isUser
-                        ? 'bg-[#52AE30]/20 border border-[#52AE30]/30'
-                        : 'hover:bg-[#1A222C] transition-colors'
+                        ? 'bg-[#D20000]/20 border border-[#D20000]/30'
+                        : 'hover:bg-[#323232] transition-colors'
                     }`}
                     initial={{ x: -30, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
@@ -117,12 +117,12 @@ export default function LeaderboardsSlide() {
                       layout
                       className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center font-bold text-xs md:text-sm ${
                         user.rank === 1
-                          ? 'bg-[#C5A572] text-white'
+                          ? 'bg-[#D20000] text-[#1A1A1A]'
                           : user.rank === 2
                           ? 'bg-[#C0C0C0] text-[#333]'
                           : user.rank === 3
                           ? 'bg-[#CD7F32] text-white'
-                          : 'bg-[#1A222C] text-[#8A94A6]'
+                          : 'bg-[#323232] text-[#8A94A6]'
                       }`}
                     >
                       {user.rank}
@@ -131,7 +131,7 @@ export default function LeaderboardsSlide() {
                     {/* Avatar */}
                     <div
                       className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-semibold text-sm md:text-base ${
-                        user.isUser ? 'bg-[#52AE30] text-white' : 'bg-[#2A323C] text-white'
+                        user.isUser ? 'bg-[#D20000] text-[#1A1A1A]' : 'bg-[#2A323C] text-white'
                       }`}
                     >
                       {user.avatar}
@@ -139,7 +139,7 @@ export default function LeaderboardsSlide() {
 
                     {/* Name and level */}
                     <div className="flex-1">
-                      <p className={`font-medium text-sm md:text-base ${user.isUser ? 'text-[#52AE30]' : 'text-white'}`}>
+                      <p className={`font-medium text-sm md:text-base ${user.isUser ? 'text-[#D20000]' : 'text-white'}`}>
                         {user.name}
                       </p>
                       <p className="text-[10px] md:text-xs text-[#8A94A6]">{user.level}</p>
@@ -150,7 +150,7 @@ export default function LeaderboardsSlide() {
                       <motion.p
                         className="font-bold text-white text-sm md:text-base"
                         key={user.xp}
-                        initial={user.isUser && hasAnimated ? { scale: 1.2, color: '#52AE30' } : false}
+                        initial={user.isUser && hasAnimated ? { scale: 1.2, color: '#D20000' } : false}
                         animate={{ scale: 1, color: '#ffffff' }}
                         transition={{ duration: 0.3 }}
                       >
@@ -166,7 +166,7 @@ export default function LeaderboardsSlide() {
                         animate={{ scale: 1, opacity: 1 }}
                         className="absolute -right-1 -top-1 md:relative md:right-auto md:top-auto"
                       >
-                        <div className="flex items-center gap-0.5 text-[#52AE30]">
+                        <div className="flex items-center gap-0.5 text-[#D20000]">
                           <svg className="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
                           </svg>
@@ -180,7 +180,7 @@ export default function LeaderboardsSlide() {
 
               {/* Your position highlight */}
               <motion.div
-                className="mt-2 md:mt-4 p-2 md:p-4 bg-gradient-to-r from-[#52AE30]/10 to-transparent rounded-lg md:rounded-xl border-l-2 md:border-l-4 border-[#52AE30]"
+                className="mt-2 md:mt-4 p-2 md:p-4 bg-gradient-to-r from-[#D20000]/10 to-transparent rounded-lg md:rounded-xl border-l-2 md:border-l-4 border-[#D20000]"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
@@ -193,7 +193,7 @@ export default function LeaderboardsSlide() {
                       exit={{ opacity: 0 }}
                     >
                       <span className="font-semibold">You&apos;re #4!</span> Earn{' '}
-                      <span className="text-[#52AE30] font-bold">621 more XP</span> to reach the podium
+                      <span className="text-[#D20000] font-bold">621 more XP</span> to reach the podium
                     </motion.p>
                   ) : (
                     <motion.p
@@ -202,7 +202,7 @@ export default function LeaderboardsSlide() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                     >
-                      <span className="font-semibold text-[#52AE30]">You made it to #3!</span> 🎉 You&apos;re on the podium!
+                      <span className="font-semibold text-[#D20000]">You made it to #3!</span> 🎉 You&apos;re on the podium!
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -234,13 +234,13 @@ export default function LeaderboardsSlide() {
               {shopItems.map((item, index) => (
                 <motion.div
                   key={item.name}
-                  className="bg-[#1A222C] rounded-lg md:rounded-xl p-2 md:p-4 hover:border-[#52AE30]/50 border border-transparent transition-all cursor-pointer group"
+                  className="bg-[#323232] rounded-lg md:rounded-xl p-2 md:p-4 hover:border-[#D20000]/50 border border-transparent transition-all cursor-pointer group"
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
                 >
                   <div className="text-2xl md:text-4xl mb-1.5 md:mb-3">{item.image}</div>
-                  <span className="text-[8px] md:text-xs text-[#52AE30] font-medium">{item.category}</span>
+                  <span className="text-[8px] md:text-xs text-[#D20000] font-medium">{item.category}</span>
                   <p className="text-white font-medium text-xs md:text-sm mt-0.5 md:mt-1 leading-tight">{item.name}</p>
                   <div className="mt-2 md:mt-3 flex items-center gap-1">
                     <span className="text-[#3498DB] font-bold text-sm md:text-base">{item.points}</span>

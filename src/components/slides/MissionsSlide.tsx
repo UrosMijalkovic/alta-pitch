@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 const missionCategories = [
   {
     title: "Onboarding",
-    color: "#52AE30",
+    color: "#D20000",
     missions: [
       { step: "Complete your profile", xp: 50, done: true },
       { step: "Enable biometrics", xp: 30, done: true },
@@ -35,7 +35,7 @@ const missionCategories = [
   },
   {
     title: "Salary Migration",
-    color: "#C5A572",
+    color: "#D20000",
     missions: [
       { step: "Request salary change form", xp: 30, done: true },
       { step: "Submit to employer", xp: 50, done: true },
@@ -56,7 +56,7 @@ export default function MissionsSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#52AE30] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
             How It Works
           </span>
           <h2
@@ -77,7 +77,7 @@ export default function MissionsSlide() {
           {missionCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="glass rounded-lg md:rounded-2xl overflow-hidden group hover:border-[#52AE30]/50 transition-all duration-300"
+              className="glass rounded-lg md:rounded-2xl overflow-hidden group hover:border-[#D20000]/50 transition-all duration-300"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
@@ -94,7 +94,7 @@ export default function MissionsSlide() {
                 <div className="flex items-center justify-between relative z-10">
                   <h3 className="font-semibold text-white text-xs md:text-base">{category.title}</h3>
                   {category.progress === 100 && (
-                    <span className="px-1.5 md:px-2 py-0.5 rounded-full text-[8px] md:text-xs font-medium bg-[#52AE30] text-white">
+                    <span className="px-1.5 md:px-2 py-0.5 rounded-full text-[8px] md:text-xs font-medium bg-[#D20000] text-[#1A1A1A]">
                       Complete
                     </span>
                   )}
@@ -126,7 +126,7 @@ export default function MissionsSlide() {
                     <div
                       className={`w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
                         mission.done
-                          ? 'bg-[#52AE30]'
+                          ? 'bg-[#D20000]'
                           : 'border-2 border-[#2A323C]'
                       }`}
                     >
@@ -144,8 +144,8 @@ export default function MissionsSlide() {
                     <span
                       className={`text-[8px] md:text-xs font-medium px-1 md:px-2 py-0.5 rounded flex-shrink-0 ${
                         mission.done
-                          ? 'bg-[#52AE30]/20 text-[#52AE30]'
-                          : 'bg-[#1A222C] text-[#8A94A6]'
+                          ? 'bg-[#D20000]/20 text-[#D20000]'
+                          : 'bg-[#323232] text-[#8A94A6]'
                       }`}
                     >
                       +{mission.xp}
@@ -165,12 +165,12 @@ export default function MissionsSlide() {
           transition={{ delay: 0.9, duration: 0.5 }}
         >
           <div className="inline-flex items-center gap-2 md:gap-4 glass rounded-full px-3 md:px-6 py-2 md:py-3">
-            <svg className="w-4 h-4 md:w-5 md:h-5 text-[#52AE30]" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-4 h-4 md:w-5 md:h-5 text-[#D20000]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
             </svg>
             <p className="text-[#8A94A6] text-xs md:text-base">
               Each completed mission unlocks the next, creating a{' '}
-              <span className="text-[#52AE30] font-medium">natural progression path</span>
+              <span className="text-[#D20000] font-medium">natural progression path</span>
             </p>
           </div>
         </motion.div>

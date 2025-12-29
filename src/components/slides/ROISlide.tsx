@@ -13,7 +13,7 @@ const metrics = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    color: "#52AE30",
+    color: "#D20000",
   },
   {
     label: "60-Day Retention",
@@ -35,7 +35,7 @@ const metrics = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    color: "#C5A572",
+    color: "#D20000",
   },
   {
     label: "Online Bill Payments",
@@ -98,7 +98,7 @@ export default function ROISlide() {
             Industry <span className="gradient-text">Benchmarks</span>
           </h2>
           <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
-            Our goal is to achieve these and better results together with OTP
+            Our goal is to achieve these and better results together with Alta banka
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function ROISlide() {
           {metrics.map((metric, index) => (
             <motion.div
               key={metric.label}
-              className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#52AE30]/50 transition-all"
+              className="glass rounded-lg md:rounded-xl p-2 md:p-4 relative overflow-hidden group hover:border-[#D20000]/50 transition-all"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
@@ -158,7 +158,7 @@ export default function ROISlide() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <div className="text-center md:text-left">
               <motion.div
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#52AE30] mb-1 md:mb-2"
+                className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#D20000] mb-1 md:mb-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 +<AnimatedCounter target={270} />%
@@ -175,7 +175,7 @@ export default function ROISlide() {
                 <p className="text-[10px] md:text-sm text-[#8A94A6]">Industry Data</p>
               </div>
               <div className="text-center">
-                <div className="text-xl md:text-3xl font-bold text-[#C5A572]">Proven</div>
+                <div className="text-xl md:text-3xl font-bold text-[#D20000]">Proven</div>
                 <p className="text-[10px] md:text-sm text-[#8A94A6]">Results</p>
               </div>
               <div className="text-center">
