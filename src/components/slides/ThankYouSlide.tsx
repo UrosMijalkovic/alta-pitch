@@ -63,20 +63,25 @@ export default function ThankYouSlide() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-3 md:gap-4 glass rounded-xl md:rounded-2xl px-5 md:px-8 py-3 md:py-5 group hover:border-[#D20000]/50 transition-all cursor-pointer">
+          <a
+            href="https://calendly.com/uros-mijalkovic/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 md:gap-4 glass rounded-xl md:rounded-2xl px-5 md:px-8 py-3 md:py-5 group hover:border-[#D20000]/50 transition-all cursor-pointer"
+          >
             <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br from-[#D20000] to-[#262626] flex items-center justify-center green-glow group-hover:scale-110 transition-transform">
               <svg className="w-5 h-5 md:w-7 md:h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
             </div>
             <div className="text-left">
-              <p className="text-white font-semibold text-sm md:text-lg">Demo Presentation</p>
-              <p className="text-[#8A94A6] text-xs md:text-sm">See iDojo platform in action</p>
+              <p className="text-white font-semibold text-sm md:text-lg">Schedule a Demo</p>
+              <p className="text-[#8A94A6] text-xs md:text-sm">Book a 30-min call with us</p>
             </div>
             <svg className="w-5 h-5 md:w-6 md:h-6 text-[#D20000] group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </div>
+          </a>
         </motion.div>
 
         {/* Partnership visual */}
