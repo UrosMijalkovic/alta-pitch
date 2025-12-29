@@ -45,25 +45,25 @@ const controlFeatures = [
 
 export default function BankControlSlide() {
   return (
-    <div className="h-full w-full flex flex-col justify-center px-4 md:px-12 lg:px-16 py-4 md:py-6">
+    <div className="h-full w-full flex flex-col justify-center px-3 sm:px-4 md:px-12 lg:px-16 py-2 sm:py-4 md:py-6">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-4 md:mb-6 text-center"
+          className="mb-2 sm:mb-3 md:mb-6 text-center"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-4 block">
             Bank Control
           </span>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
+            className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-0.5 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Your Platform, <span className="gradient-text">Your Rules</span>
           </h2>
-          <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
             Full administrative control with zero regulatory risk
           </p>
         </motion.div>
@@ -212,7 +212,7 @@ export default function BankControlSlide() {
           </motion.div>
 
           {/* Features & Compliance */}
-          <div className="space-y-3 md:space-y-6">
+          <div className="space-y-2 sm:space-y-3 md:space-y-6">
             {/* Control features */}
             <motion.div
               className="grid grid-cols-2 gap-2 md:gap-4"
@@ -223,39 +223,39 @@ export default function BankControlSlide() {
               {controlFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-                  className="glass rounded-lg md:rounded-xl p-2 md:p-4 hover:border-[#D20000]/50 transition-all"
+                  className="glass rounded-lg md:rounded-xl p-1.5 sm:p-2 md:p-4 hover:border-[#D20000]/50 transition-all"
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
                 >
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-[#D20000]/20 text-[#D20000] flex items-center justify-center mb-2 md:mb-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg bg-[#D20000]/20 text-[#D20000] flex items-center justify-center mb-1.5 sm:mb-2 md:mb-3">
                     {feature.icon}
                   </div>
-                  <h4 className="text-white font-medium text-xs md:text-sm">{feature.title}</h4>
-                  <p className="text-[10px] md:text-xs text-[#8A94A6] mt-0.5 md:mt-1">{feature.description}</p>
+                  <h4 className="text-white font-medium text-[10px] sm:text-xs md:text-sm">{feature.title}</h4>
+                  <p className="text-[8px] sm:text-[10px] md:text-xs text-[#8A94A6] mt-0.5 md:mt-1">{feature.description}</p>
                 </motion.div>
               ))}
             </motion.div>
 
             {/* GDPR Compliance card */}
             <motion.div
-              className="glass rounded-lg md:rounded-2xl p-3 md:p-6"
+              className="glass rounded-lg md:rounded-2xl p-2 sm:p-3 md:p-6"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-[#D20000] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 md:w-7 md:h-7 text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-[#D20000] flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[#D20000] text-base md:text-xl">✓</span>
-                    <h3 className="text-sm md:text-lg font-semibold text-white">GDPR-aligned by design</h3>
+                  <div className="flex items-center gap-1 sm:gap-2 mb-0.5 sm:mb-1">
+                    <span className="text-[#D20000] text-sm sm:text-base md:text-xl">✓</span>
+                    <h3 className="text-xs sm:text-sm md:text-lg font-semibold text-white">GDPR-aligned by design</h3>
                   </div>
-                  <p className="text-xs md:text-base text-[#8A94A6]">
+                  <p className="text-[10px] sm:text-xs md:text-base text-[#8A94A6]">
                     No personal data ingestion, storage, or profiling
                   </p>
                 </div>

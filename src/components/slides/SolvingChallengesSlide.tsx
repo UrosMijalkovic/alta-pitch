@@ -67,31 +67,31 @@ const solutionsMapping = [
 
 export default function SolvingChallengesSlide() {
   return (
-    <div className="h-full w-full flex flex-col justify-center px-4 md:px-12 lg:px-16 py-4 md:py-6">
+    <div className="h-full w-full flex flex-col justify-center px-3 sm:px-4 md:px-12 lg:px-16 py-2 sm:py-4 md:py-6">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-4 md:mb-6 text-center"
+          className="mb-2 sm:mb-3 md:mb-6 text-center"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-4 block">
             Solutions Mapping
           </span>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
+            className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-0.5 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Solving Alta banka&apos;s <span className="gradient-text">Specific</span> Challenges
           </h2>
-          <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
             Direct mapping from pain points to proven solutions
           </p>
         </motion.div>
 
         {/* Solutions table */}
-        <div className="space-y-2 md:space-y-3">
+        <div className="space-y-1.5 sm:space-y-2 md:space-y-3">
           {solutionsMapping.map((item, index) => (
             <motion.div
               key={item.pain}
@@ -170,16 +170,16 @@ export default function SolvingChallengesSlide() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="mt-4 md:mt-6 text-center"
+          className="mt-2 sm:mt-3 md:mt-6 text-center"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 md:gap-3 glass rounded-full px-3 md:px-6 py-2 md:py-3">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D20000] animate-pulse" />
-            <p className="text-[#8A94A6] text-xs md:text-base">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 glass rounded-full px-2 sm:px-3 md:px-6 py-1.5 sm:py-2 md:py-3">
+            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D20000] animate-pulse flex-shrink-0" />
+            <p className="text-[#8A94A6] text-[10px] sm:text-xs md:text-base">
               Every solution is{' '}
-              <span className="text-[#D20000] font-medium">configurable by Alta banka</span>
+              <span className="text-[#D20000] font-medium">configurable</span>
               {' '}and{' '}
               <span className="text-[#D20000] font-medium">measurable in real-time</span>
             </p>

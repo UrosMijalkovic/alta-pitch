@@ -49,25 +49,25 @@ export default function LeaderboardsSlide() {
   }, []);
 
   return (
-    <div className="h-full w-full flex flex-col justify-center px-4 md:px-12 lg:px-16 py-4 md:py-6">
+    <div className="h-full w-full flex flex-col justify-center px-3 sm:px-4 md:px-12 lg:px-16 py-2 sm:py-4 md:py-6">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-4 md:mb-6 text-center"
+          className="mb-2 sm:mb-3 md:mb-5 text-center"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#D20000] text-xs md:text-sm font-medium uppercase tracking-widest mb-2 md:mb-4 block">
+          <span className="text-[#D20000] text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-widest mb-1 md:mb-2 block">
             Community & Rewards
           </span>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-1 md:mb-2"
+            className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-0.5 md:mb-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Create <span className="gradient-text">Community</span> & Choice
           </h2>
-          <p className="text-sm md:text-xl text-[#8A94A6] max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-lg text-[#8A94A6] max-w-2xl mx-auto">
             Leaderboards drive friendly competition while the shop offers meaningful rewards
           </p>
         </motion.div>
